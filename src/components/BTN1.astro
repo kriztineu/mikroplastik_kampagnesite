@@ -1,0 +1,35 @@
+---
+const { data } = Astro.props;
+---
+
+<button>
+    <p>{data}</p>
+</button>
+
+<style> /* RET TIL DE NYE KNAPPER */
+    button {
+        background-color: var(--yellow);
+        width: 170px;
+        height: 67px;
+        flex-shrink: 0;
+        border-radius: var(--cta-btn-border-radius, 35px);
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    p {
+        color: var(--black);
+        font-size: medium;
+        font-weight: 600;
+    }
+
+    button:hover {
+        background-color: var(--black);
+    }
+
+    button:hover p {
+        color: var(--white);
+    }
+    
+</style>
