@@ -1,41 +1,95 @@
 <footer>
-    <div class="secondaryBoxSection">
-        <h1>Gå ikke glip af nyhedsbrevet!</h1>
+    <div class="secondaryBoxSection FooterBlaa">
+        <h1 class = h1Footer>Gå ikke glip af nyhedsbrevet!</h1>
         <form>
             <input type="text" id="E-mail" value="Skriv din e-mail her"></label>
         </form>
     </div>
+
     <div class="primaryBoxSection">
-        <ul>
-            <h3>Kontakt</h3>
-            <li>Mail: info@plasticchange.org</li>
-            <li>Tlf: + 45 42 66 72 46</li>
-            <li>Telefontid: Mandag-Fredag</li>
-            <li>Kl. 10:00 - 15:00</li>
-            <li>Presse</li>
-        </ul>
+        <div class="FooterRoed">
+            <ul>
+                <h2 class = "h2Footer">Kontakt</h2>
+                <li>Mail: info@plasticchange.org</li>
+                <li>Tlf: + 45 42 66 72 46</li>
+                <li>Telefontid: Mandag-Fredag</li>
+                <li>Kl. 10:00 - 15:00</li>
+                <li>Presse</li>
+            </ul>
 
-        <ul>
-            <h3>Generelt</h3>
-            <li>Støt nu</li>
-            <li>Bliv medlem</li>
-            <li>Hvad vi vil</li>
-            <li>Videnscenter</li>
-            <li>Medlemmer & bestyrelse</li>
-            <li>FAQ</li>
-        </ul>
+            <ul>
+                <h2 class = "h2Footer">Generelt</h2>
+                <li>Støt nu</li>
+                <li>Bliv medlem</li>
+                <li>Hvad vi vil</li>
+                <li>Videnscenter</li>
+                <li>Medlemmer & bestyrelse</li>
+                <li>FAQ</li>
+            </ul>
+        <div/>
     </div>
+     <p>© 2024 Plastic Change</p> <!--Den læser koden forkert. Denne p burde stå indeni! -->
 
-    <p>© 2024 Plastic Change</p>
 
 </footer>
 
 <style>
-    .FooterBlaa {
     
+    .FooterBlaa {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 70px;
+        padding: 2rem;
+        width: 100%;
     }
 
     .FooterRoed {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 45px;
+        padding: 2rem;
+        width: 100%;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3px;
+        list-style: none;
+    }
+
+    .h2Footer {
+        padding-bottom: 10px;
+    }
+
+    p {
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+
+
+    @media screen and (min-width: 800px) {
+        footer {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+
+        .FooterRoed {
+        flex-direction: row;
+        justify-content: center;
+        gap: 190px;
+        }
+
+        ul {
+        gap: 5px;
+        list-style: none;
+    }
         
     }
     

@@ -5,3 +5,41 @@ h1 {
   font-style: normal;
   font-weight: 700;
 }
+
+h2 {
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h3 {
+}
+
+p {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* FOOTER MOBIL */
+
+.h1Footer {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.h2Footer {
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.FooterRoed li {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}

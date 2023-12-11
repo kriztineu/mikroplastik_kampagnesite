@@ -79,6 +79,9 @@ p {
   color: var(--dark-blue);
 }
 
+li {
+  color: var(--white);
+}
 /* BUTTONS */
 
 .primaryBTN {
