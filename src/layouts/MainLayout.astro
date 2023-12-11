@@ -1,5 +1,7 @@
 ---
 import "../styles/style.css"
+import "../styles/mobil.css"
+import "../styles/desktop.css"
 const { title } = Astro.props;
 import Header from "../components/Header.astro";
 import SoMe from "../components/SoMe.astro";
@@ -8,6 +10,9 @@ import Footer from "../components/Footer.astro";
 
 <html lang="da">
 	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> 
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta

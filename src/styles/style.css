@@ -1,8 +1,11 @@
+/* GENERELT */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   --primary-red: #ff1054;
+  --form-active: #ff1054a5;
   --dark-blue: #01142a;
   --white: #ffffff;
   --grey: #a0a0a0;
@@ -11,4 +14,133 @@
 
 body {
   hyphens: auto;
+}
+
+/* BAGGRUNDSFARVER */
+
+.primaryBoxSection {
+  background-color: var(--primary-red);
+}
+
+.secondaryBoxSection {
+  background-color: var(--dark-blue);
+}
+
+.tertiaryBoxSection {
+  background-color: var(--white);
+}
+
+/* TEXT */
+
+.textUnderline {
+  color: var(--primary-red);
+}
+
+h1,
+h2,
+h3 {
+  font-family: Campton;
+}
+
+p,
+li {
+  font-family: "Rubik", sans-serif;
+}
+
+h1 {
+  color: var(--white);
+}
+
+.h1Secondary {
+  color: var(--dark-blue);
+}
+
+h2 {
+  color: var(--white);
+}
+
+.h2Secondary {
+  color: var(--dark-blue);
+}
+
+h3 {
+  color: var(--white);
+}
+
+.h3Secondary {
+  color: var(--dark-blue);
+}
+
+p {
+  color: var(--white);
+}
+
+.pSecondary {
+  color: var(--dark-blue);
+}
+
+/* BUTTONS */
+
+.primaryBTN {
+  background-color: var(--primary-red);
+}
+
+.primaryBTNText {
+  color: var(--primary-red);
+}
+
+.secondaryBTN {
+  background-color: var(--dark-blue);
+}
+
+.secondaryBTNText {
+  color: var(--dark-blue);
+}
+.tertiaryBTN {
+  background-color: var(--white);
+}
+
+.tertiaryBTNText {
+  color: var(--white);
+}
+
+/* FORM */
+
+.formBox {
+  background-color: var(--dark-blue);
+}
+
+.formTextPrimary {
+  color: var(--white);
+}
+
+.formTextSecondary {
+  color: var(--light-grey);
+}
+
+.formBTNActive {
+  color: var(--form-active);
+}
+
+.inputText {
+  color: var(--grey);
+}
+
+/* INSTA- BANNER */
+
+.instagramBanner {
+  background-color: var(--primary-red);
+}
+.instagramBannerText {
+  color: var(--white);
+}
+
+/* HASHTAG-BANNER */
+
+.hashtagBanner {
+  background-color: var(--dark-blue);
+}
+
+.hashtagBannerText {
+  color: var(--white);
 }
