@@ -2,6 +2,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  --primary-red: #ff1054;
+  --dark-blue: #01142a;
+  --white: #ffffff;
+  --grey: #a0a0a0;
+  --light-grey: #d9d9d9;
 }
 
 body {
