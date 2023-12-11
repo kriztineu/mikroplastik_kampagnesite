@@ -11,6 +11,17 @@
   }
 
   p {
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  button {
+    width: 136px;
+    height: 39px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
   }
 
   /* FOOTER DESKTOP */

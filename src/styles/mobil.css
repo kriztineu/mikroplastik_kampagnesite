@@ -22,6 +22,14 @@ p {
   font-weight: 400;
 }
 
+button {
+  width: 105px;
+  height: 30px;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+
 /* FOOTER MOBIL */
 
 .h1Footer {

@@ -84,6 +84,13 @@ li {
 }
 /* BUTTONS */
 
+button {
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
 .primaryBTN {
   background-color: var(--primary-red);
 }
