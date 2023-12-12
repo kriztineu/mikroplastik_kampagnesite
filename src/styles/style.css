@@ -78,6 +78,7 @@ h3 {
 
 p {
   color: var(--white);
+  max-width: 65ch;
 }
 
 .pSecondary {
@@ -96,6 +97,10 @@ li {
   color: var(--white);
 }
 /* BUTTONS */
+
+button {
+  cursor: pointer;
+}
 
 .BTN {
   cursor: pointer;
