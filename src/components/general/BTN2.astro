@@ -2,16 +2,16 @@
 const { data } = Astro.props;
 ---
 
-<button class="tertiaryBTN BTN">
-    <p class="secondaryBTNText">{data}</p>
+<button class="secondaryBTN BTN">
+    <p class="tertiaryBTNText">{data}</p>
 </button>
 
 <style> /* RET TIL DE NYE KNAPPER */
     button:hover {
-        background-color: var(--dark-blue);
+        background-color: var(--white);
     }
 
     button:hover p {
-        color: var(--white);
+        color: var(--dark-blue);
     }
 </style>
