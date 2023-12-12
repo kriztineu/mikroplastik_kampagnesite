@@ -84,6 +84,14 @@ p {
   color: var(--dark-blue);
 }
 
+.citatPrimary {
+  color: var(--white);
+}
+
+.citatSecondary {
+  color: var(--primary-red);
+}
+
 li {
   color: var(--white);
 }
