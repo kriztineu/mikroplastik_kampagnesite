@@ -1,0 +1,314 @@
+---
+import BTN1 from "../general/BTN1.astro";
+---
+
+
+<article class="box-section">
+
+<section class="section-1">
+<div class="red-box primaryBoxSection">
+    <p class="citatIcon citatPrimary">“</p>
+    <p class="citatText citatPrimary">
+        Forskere har fundet flere store hvaler, der er døde af sult, fordi deres maver er helt fyldt af plastik – og vi ved, at der også findes mikroplast med kemikalier i meget af den mad, vi mennesker spiser.
+    </p>
+    <div class="citatByline">
+        <div class="img"></div>
+        <div class="byline">
+        <p class="nameByline">Henrik Beha Pedersen</p>
+        <p class="titleByline">Miljøbiolog & stifter af Plastic Change</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="section-2">
+<div class="white-box tertiaryBoxSection">
+    <p class="pSecondary text1">4130</p>
+    <p class="pSecondary text2">ton mikroplast</p>
+    <div class="small-text">
+    <p class="pSecondary text3">bruges i EU årligt til kosmetiske produkter.</p>
+    <p class="pSecondary text3">I Danmark er det tal årligt på 29 tons</p>
+    </div>
+</div>
+
+<div class="blue-box secondaryBoxSection">
+    <p class="p-blue-box">Vi er en NGO der kæmper for et plastikfrit samfund.</p>
+    <div class="btn"><BTN1 data="Udforsk Plast Change"/><div>
+</div>
+
+</section>
+</article>
+
+<style>
+
+.box-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.red-box {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding-bottom: 70px;
+padding-right: 50px;
+padding-left: 50px;
+}
+.citatText {
+font-family: Campton;
+font-size: 25px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+
+}
+
+.citatIcon {
+text-align: center;
+font-family: Campton;
+font-size: 100px;
+font-style: normal;
+font-weight: 700;
+padding-top: 93px;
+}
+
+.citatByline {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.byline {
+    display: flex;
+    flex-direction: column;
+}
+
+.img {
+    border-radius: 50%;
+    background-color: grey;
+    height: 50px;
+    width: 50px;
+}
+
+.nameByline p {
+font-weight: 400;
+font-family: Rubik;
+font-size: 13px;
+font-style: normal;
+line-height: 15px;
+}
+
+.titleByline p {
+font-weight: 300;
+font-family: Rubik;
+font-size: 13px;
+font-style: normal;
+line-height: 15px;
+}
+
+.white-box {
+}
+
+.text1 {
+text-align: center;
+font-family: Campton;
+font-size: 6rem;
+font-style: normal;
+font-weight: 900;
+line-height: 55px;
+margin-top: 85px;
+
+}
+
+
+.text2 {
+font-family: Campton;
+font-size: 2rem;
+font-style: normal;
+font-weight: 900;
+line-height: 2rem;
+text-align: center;
+}
+
+.text3 {
+text-align: center;
+font-size: 0.9rem;
+font-weight: 500;
+line-height: 21px;
+}
+
+.big-text {
+}
+
+.small-text {
+    padding-top: 0.5rem;
+    margin-bottom: 85px;
+}
+
+.blue-box {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:3rem;
+
+}
+
+.p-blue-box {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 400;
+    margin-left: 45px;
+    margin-right: 45px;
+
+}
+
+.btn {
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+}
+
+@media screen and (min-width: 800px) {
+    
+    .box-section {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .section1 {
+    display: flex;
+    flex-direction: column;
+    }
+    .section2 {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .red-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 70px;
+    padding-right: 80px;
+    padding-left: 80px;
+    
+    }
+    
+    .citatText {
+    font-family: Campton;
+    font-size: 49px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    
+    }
+    
+    .citatIcon {
+    text-align: center;
+    font-family: Campton;
+    font-size: 200px;
+    font-style: normal;
+    font-weight: 700;
+    padding-top: 99px;
+    }
+
+    .citatByline {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.byline {
+    display: flex;
+    flex-direction: column;
+}
+
+.img {
+    border-radius: 50%;
+    background-color: grey;
+    height: 70px;
+    width: 70px;
+}
+
+.nameByline {
+    font-weight: 500;
+    font-family: Rubik;
+font-size: 20px;
+font-style: normal;
+line-height: 30px; 
+}
+
+.titleByline {
+    font-weight: 300;
+    font-family: Rubik;
+font-size: 20px;
+font-style: normal;
+line-height: 30px;
+}
+
+    .white-box{
+        padding-left: 52px;
+        padding-right: 52px;
+    }
+
+.text1 {
+text-align: center;
+font-family: Campton;
+font-size: 9.3rem;
+font-style: normal;
+font-weight: 900;
+line-height: 55px;
+margin-top: 140px;
+width: 440px;
+
+}
+
+.text2 {
+font-family: Campton;
+font-size: 3.5rem;
+font-style: normal;
+font-weight: 900;
+line-height: 6rem;
+text-align: center;
+width: 440px;
+}
+
+.text3 {
+text-align: center;
+font-size: 1.25rem;
+font-weight: 500;
+line-height: 30px;
+}
+
+.small-text {
+    padding-top: 0.5rem;
+    margin-bottom: 100px;
+    width: 440px;
+    text-align: center;
+}
+
+.blue-box{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .p-blue-box {
+    font-size: 35px;
+    text-align: center;
+    font-weight: 400;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+}
+
+
+</style>
