@@ -1,7 +1,11 @@
 ---
 import BTN1 from "../general/BTN1.astro";
 ---
-
+<article class="imgSection">
+    <section>
+        <img src="public/img/placeholderfoto_landingpage2.jpg" class="imgBanner" alt="Photo of plastic cups found on the beach"/>
+    </section>
+</article>
 <article class="stoetBox secondaryBoxSection">
     <section class="stoetBoxElements">
     <h2 class="boxText">
@@ -17,6 +21,8 @@ import BTN1 from "../general/BTN1.astro";
     margin:1rem;
     width: 18.75rem;
     height: 16.563rem;
+    position: relative;
+    top: -8rem;
 }
 
 .stoetBoxElements {
@@ -39,9 +45,19 @@ import BTN1 from "../general/BTN1.astro";
     margin-top: 2.5rem;
 }
 
+.imgSection {
+    margin:0;
+}
+
+.imgBanner {
+    height: auto;
+    width: 150%;
+}
 @media screen and (min-width: 800px) {
 
 .stoetBox {
+    position: relative;
+    top: -25rem;
     margin: 4rem;
     margin-left: 8rem;
     width: 34rem;
@@ -65,6 +81,15 @@ import BTN1 from "../general/BTN1.astro";
     display: flex;
     justify-content: right;
     margin-top: 3.5rem;
+}
+
+.imgSection {
+    margin:0;
+}
+
+.imgBanner {
+    height: auto;
+    width: 100%;
 }
 
 }
