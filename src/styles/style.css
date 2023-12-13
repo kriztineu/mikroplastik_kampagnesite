@@ -17,6 +17,11 @@
   hyphens: auto;
 } */
 
+::selection {
+  background-color: var(--light-grey); /* Ændr farven efter behov */
+  color: var(--primary-red); /* Ændr tekstfarven efter behov */
+}
+
 /* BAGGRUNDSFARVER */
 
 .primaryBoxSection {
