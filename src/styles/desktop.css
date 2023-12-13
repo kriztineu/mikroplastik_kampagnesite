@@ -31,11 +31,12 @@
   }
 
   .BTN {
-    width: 136px;
-    height: 39px;
-    font-size: 18px;
+    width: 11rem;
+    height: 3.5rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
+    padding: 0.5rem;
   }
 
   /* FOOTER DESKTOP */
