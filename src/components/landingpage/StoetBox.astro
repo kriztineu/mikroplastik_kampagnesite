@@ -1,0 +1,54 @@
+---
+import BTN1 from "../general/BTN1.astro";
+---
+
+<article class="stoetBox secondaryBoxSection">
+    <section class="stoetBoxElements">
+    <h2 class="boxText">
+        Støt vores kamp mod mikroplastik med en donation.
+    </h2>
+    <div class="boxButton"><BTN1 data="Giv et bidrag"/></div>
+    </section>
+</article>
+
+<style>
+
+.stoetBox {
+    margin:1rem;
+    width: 18.75rem;
+    height: 16.563rem;
+}
+
+.stoetBoxElements {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right:2rem;
+}
+
+.boxText {
+    text-align: left;
+    width: 15.313rem;
+}
+
+.boxButton {
+display: flex;
+justify-content: right;
+margin-top: 2.5rem;
+}
+
+@media screen and (min-width: 800px) {
+
+.stoetBox {
+
+}
+
+
+}
+
+
+
+
+</style>
