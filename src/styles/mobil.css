@@ -33,7 +33,7 @@ p {
 .BTN {
   width: 105px;
   height: 30px;
-  font-size: 10px;
+  font-size: 0.6rem;
   font-style: normal;
   font-weight: 400;
 }

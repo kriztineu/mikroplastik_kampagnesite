@@ -1,0 +1,68 @@
+<section>
+<div class="instaHeading">
+    <div class="instaHeadingSlide">
+        <h1>Følg os på @plasticchange - </h1>
+        <h1>Følg os på @plasticchange - </h1>
+        <h1>Følg os på @plasticchange - </h1>
+        <h1>Følg os på @plasticchange - </h1>
+        <h1>Følg os på @plasticchange - </h1>
+        <h1>Følg os på @plasticchange - </h1>
+        <h1>Følg os på @plasticchange - </h1>
+        <h1>Følg os på @plasticchange - </h1>
+    </div>
+</div>
+</section>
+<style>
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .instaHeadingSlide {
+        flex-direction: row;
+        display: flex;
+        animation: 10s slide infinite linear;
+    }
+
+    .instaHeadingSlide h1 {
+        margin: 0 40px;
+    }
+
+    .instaHeading {
+        overflow: hidden;
+        white-space: nowrap;
+        padding:30px 0;
+        background-color: var(--primary-red);
+    }
+
+    @keyframes slide {
+        from {     
+            transform: translateX(0);
+           }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+    .instaHeadingSlide {
+        flex-direction: row;
+        display: flex;
+        animation: 10s slide infinite linear;
+    }
+
+    .instaHeadingSlide h1 {
+        margin: 0 40px;
+    }
+
+    .instaHeading {
+        overflow: hidden;
+        white-space: nowrap;
+        padding:60px 0;
+        background-color: var(--primary-red);
+    }
+
+}
+
+</style>

@@ -1,0 +1,95 @@
+---
+import BTN1 from "../general/BTN1.astro";
+---
+<article class="imgSection">
+    <section>
+        <img src="public/img/placeholderfoto_landingpage2.jpg" class="imgBanner" alt="Photo of plastic cups found on the beach"/>
+    </section>
+</article>
+<article class="stoetBox secondaryBoxSection">
+    <section class="stoetBoxElements">
+    <h2 class="boxText">
+        Støt vores kamp mod mikroplastik med en donation.
+    </h2>
+    <div class="boxButton"><BTN1 data="Giv et bidrag"/></div>
+    </section>
+</article>
+
+<style>
+
+.stoetBox {
+    margin:1rem;
+    width: 18.75rem;
+    height: 16.563rem;
+    position: relative;
+    top: -8rem;
+}
+
+.stoetBoxElements {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right:2rem;
+}
+
+.boxText {
+    text-align: left;
+    width: 15.313rem;
+}
+
+.boxButton {
+    display: flex;
+    justify-content: right;
+}
+
+.imgSection {
+    margin:0;
+}
+
+.imgBanner {
+    height: auto;
+    width: 150%;
+}
+@media screen and (min-width: 800px) {
+
+.stoetBox {
+    position: relative;
+    top: -25rem;
+    margin: 4rem;
+    margin-left: 8rem;
+    width: 34rem;
+    height: 32rem;
+}
+
+.stoetBoxElements {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-left: 3rem;
+    padding-right:3rem;
+}
+
+.boxText {
+    text-align: left;
+    width: 22.688rem;
+}
+
+.boxButton {
+    display: flex;
+    justify-content: right;
+}
+
+.imgSection {
+    margin:0;
+}
+
+.imgBanner {
+    height: auto;
+    width: 100%;
+}
+
+}
+
+</style>
