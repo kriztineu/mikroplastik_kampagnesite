@@ -7,7 +7,7 @@
   --primary-red: #ff1054;
   --form-active: #ff1054a5;
   --dark-blue: #01142a;
-  --dark-blue-faded: rgba(1, 20, 42, 0.85);
+  --dark-blue-faded: rgba(1, 20, 42, 0.507);
   --white: #ffffff;
   --grey: #a0a0a0;
   --light-grey: #d9d9d9;
@@ -33,6 +33,7 @@ body {
 
 .formBox {
   background-color: var(--dark-blue-faded);
+  /* background-color: var(--dark-blue); */
 }
 
 /* TEXT */
