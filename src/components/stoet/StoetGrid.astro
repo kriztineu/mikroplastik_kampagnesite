@@ -1,6 +1,104 @@
-<section>
-    <div></div>
-    <div>
-        <h2>Dit bidrag på 150 kr kan hjælpe med</h2>
-    </div>
+---
+import StoetFormular from "./StoetFormular.astro";
+---
+<section class="stoetHero">
+        <StoetFormular/>
+    <img class="globusImg" src="public/img/globus.jpg" alt="">
+
+    <section class="stoetGrid">
+        <div class="stoetRedGrid primaryBoxSection">
+        </div>
+        <div class="bidragSection">
+            <div>
+                <h2 class="h2Secondary">Et bidrag på 150,-</h2>
+                <h3 class="h3Secondary">kan blandt andet hjælpe med..</h3>
+            </div>
+
+            <div class="stoetIkoner">
+                <img src="public/icons/jorden.svg" alt="">
+                <p class="pSecondary">At forstærke kampen og indsatsen i vores politiske plastik-forslag.</p>
+            </div>
+
+            <div class="stoetIkoner">
+                <img src="public/icons/fisk.svg" alt="">
+                <p class="pSecondary">Beskytte naturen og havet mod plastikforurening. </p>
+            </div>
+
+            <div class="stoetIkoner">
+                <img src="public/icons/fodaftryk.svg" alt="">
+                <p class="pSecondary">Mindske klimaaftryk. </p>
+            </div>
+
+            <div class="stoetIkoner">
+                <img src="public/icons/kemikaler.svg" alt="">
+                <p class="pSecondary">Beskytte folkesundheden mod skadelig kemi.</p>
+            </div>
+        </div>
+    </section>
+
 </section>
+
+<style>
+    .stoetRedGrid {
+        width: 133px;
+        height: 700px;
+        }
+    .stoetGrid {
+        display: flex;
+        place-items: center;
+        }
+
+    .bidragSection {
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        gap: 2.5rem;
+    }
+    .stoetIkoner {
+        display: flex;
+        max-width: 48ch;
+        gap: 2rem;
+    }
+
+    .stoetIkoner img {
+        width: 55px;
+    }
+    .globusImg {
+        height: 700px;
+    }
+
+    @media screen and (min-width: 800px) {
+
+        .stoetGrid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px; 
+        place-items: center;
+        }
+
+        .stoetIkoner img {
+        width: 75px;
+        }
+
+        .stoetRedGrid {
+        width: 486px;
+        height: 730px;
+        }
+
+        .bidragSection {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding-left: 7rem;
+        }
+
+        .globusImg {
+        width: 100%;
+        height: 100%
+    }
+
+    }
+</style>

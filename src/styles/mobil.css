@@ -9,8 +9,8 @@ h1 {
 }
 
 .h1Blaa {
-  margin: 2rem;
-  max-width: 15ch;
+  /* font-size: 35px; ÆNDRING I TEKSTSTØRRELSE = GÅR IMOD TOKENS? */
+  margin: 1.9rem;
   text-align: left; /* EVT FØR TIL STOETFORDELING.ASTRO HVIS DET CONFLICTER MED ANDRE H1 */
 }
 
