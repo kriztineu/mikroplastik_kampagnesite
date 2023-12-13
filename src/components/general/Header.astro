@@ -3,6 +3,7 @@ import BTN1 from "./BTN1.astro";
 import BTN2 from "./BTN2.astro";
 ---
 <header>
+  <section id="navbar">
     <div class="menu-container">
       <div class="logo-container">
         <button class="btn"><a href="/index.html"></a><img src="public/logo.png" class="logo" alt="Plastic Change Logo"/></a></button>
@@ -35,6 +36,7 @@ import BTN2 from "./BTN2.astro";
 
       <!-- <div class="green"></div> -->
     </div>
+  </section>
   </header>
 
 
@@ -44,11 +46,24 @@ import BTN2 from "./BTN2.astro";
         position: absolute;
         display: flex;
         justify-content: space-between;
+        z-index: 1000;
+        overflow: hidden;
     }
 
-    header {
-      z-index: 1000;
+    /* #navbar {
+      overflow: hidden;
+    } */
+
+    .sticky {
+      position: fixed;
+      top: 0;
+    width: 100%;
+    background-color: #01142a81;
     }
+
+    .sticky + .content {
+  padding-top: 60px;
+}
 
 .logo {
     width: 150px;
@@ -241,3 +256,22 @@ import BTN2 from "./BTN2.astro";
     
 
 </style>
+
+<script>
+  window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+} 
+</script>
