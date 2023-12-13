@@ -1,4 +1,20 @@
+---
+
+---
 <article>
+        <div class="instaHeading">
+            <div class="instaHeadingSlide">
+                <h1>Følg os på @plasticchange - </h1>
+                <h1>Følg os på @plasticchange - </h1>
+                <h1>Følg os på @plasticchange - </h1>
+                <h1>Følg os på @plasticchange - </h1>
+                <h1>Følg os på @plasticchange - </h1>
+                <h1>Følg os på @plasticchange - </h1>
+                <h1>Følg os på @plasticchange - </h1>
+                <h1>Følg os på @plasticchange - </h1>
+            </div>
+        </div>
+<div class="instaImgSlider"> 
 <div class="wrapper">
     <i id="left" class="fa-regular fa-angle-left"></i>
     <div class="carousel">
@@ -14,6 +30,7 @@
     </div>
     <i id="right" class="fa-regular fa-angle-right"></i>
 </div>
+ </div> 
 </article>
 
 <style>
@@ -25,13 +42,45 @@
         box-sizing: border-box;
     }
 
-article {
+    article {
         display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+.instaHeadingSlide {
+        flex-direction: row;
+        display: flex;
+        animation: 10s slide infinite linear;
+    }
+
+    .instaHeadingSlide h1 {
+        margin: 0 40px;
+    }
+
+    .instaHeading {
+        overflow: hidden;
+        white-space: nowrap;
+        padding:30px 0;
+        background-color: var(--primary-red);
+    }
+
+    @keyframes slide {
+        from {     
+            transform: translateX(0);
+           }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+.instaImgSlider {
+    display: flex;
         padding: 0 35px;
         align-items: center;
         justify-content: center;
-        min-height: 100vh;
-    }
+        margin-bottom: 10rem;
+}
 
 
     .wrapper {
@@ -92,6 +141,25 @@ article {
         margin-left: 0px;
     }
 
+    @media screen and (min-width: 800px) {
+    .instaHeadingSlide {
+        flex-direction: row;
+        display: flex;
+        animation: 10s slide infinite linear;
+    }
+
+    .instaHeadingSlide h1 {
+        margin: 0 40px;
+    }
+
+    .instaHeading {
+        overflow: hidden;
+        white-space: nowrap;
+        padding:45px 0;
+        background-color: var(--primary-red);
+    }
+
+}
 
 @media screen and (max-width: 900px) {
 
