@@ -1,14 +1,21 @@
 <section class="HeroSection">
-    <h1>Det er ikke kun Jorden der bliver kvalt af mikroplastik</h1>
+    <h1>Det er ikke kun <span>Jorden</span> der bliver <span>kvalt</span> af <span>mikroplastik</span></h1>
     <p>Mikroplastik er småt, men problemet er stort. Vi ved det fourener vores jord, men mikroplastik ender også i vores mad, vand og endda i blodet.</p>
-    <img src="public/img/laurits.jpg" alt="">
+    <img src="public/img/laurits.jpg" alt="Mand der kvæles af plastik">
 </section>
 
 <style>
 
     .HeroSection {
         position: relative;
+        height: 100vh;
     }
+
+    span{
+    text-decoration: underline;
+    text-decoration-color: var(--primary-red);
+    text-decoration-thickness: 6px;
+}
     .HeroSection h1 {
         position: absolute;
         bottom: 0;
@@ -25,8 +32,10 @@
     }
 
     img {
+        height: 100vh;
         width: 100%;
     }
+     
 
     @media screen and (min-width: 800px) {
         .HeroSection h1 {
@@ -43,5 +52,6 @@
         padding: 2rem;
         width: initial;
     }
+
     }
 </style>
