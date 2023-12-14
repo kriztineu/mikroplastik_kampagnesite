@@ -11,20 +11,20 @@
     <div class="infoIconSection">
         <div></div>
     <div class="oneInfo">
-        <img src="public/img/lub.svg" alt="img" class="infographicicon">
+        <img src="public/img/lub.svg" alt="img" class="infographicicon icon1"> 
         <div>
-            <p class="pSecondary pHeading">Mikroplastiks størrelse</p>
-            <p class="pSecondary">Plastik under 5 millimeter betegnes som mikroplastik. Dette kan være fibre, film, eller skum og i alle typer, farver og former.</p></div>
+            <p class="pSecondary pHeading header1">Mikroplastiks størrelse</p>
+            <p class="pSecondary p1">Plastik under 5 millimeter betegnes som mikroplastik. Dette kan være fibre, film, eller skum og i alle typer, farver og former.</p></div>
     </div>
     </div>
 
 
     <div class="infoIconSection">
     <div class="oneInfo">
-        <img src="public/img/tandpasta.svg" alt="img" class="infographicicon">
+        <img src="public/img/tandpasta.svg" alt="img" class="infographicicon icon2">
         <div>
-            <p class="pSecondary pHeading">Mikroplastik i plejeprodukter</p>
-            <p class="pSecondary">Mange plejeprodukter indeholder mikroplastik. F.eks. tilsættes slibekorn i nogle tandpastaer, som ender i spildevandet når det skylles ned i vasken.</p></div>
+            <p class="pSecondary pHeading header2">Mikroplastik i plejeprodukter</p>
+            <p class="pSecondary p2">Mange plejeprodukter indeholder mikroplastik. F.eks. tilsættes slibekorn i nogle tandpastaer, som ender i spildevandet når det skylles ned i vasken.</p></div>
     </div>
         <div></div>
     </div>
@@ -33,20 +33,20 @@
     <div class="infoIconSection">
         <div></div>
         <div class="oneInfo">
-        <img src="public/img/plastikpose.svg" alt="img" class="infographicicon">
+        <img src="public/img/plastikpose.svg" alt="img" class="infographicicon icon3">
         <div>
-            <p class="pSecondary pHeading">Plastik i havet</p>
-            <p class="pSecondary">Når plastikposer ender i havet vil UV-lys og bølger nedbryde dem hurtigere. Synker den, går nedbrydningsprocessen i stå. Plastikposen vil i løbet af år fragmenteres til mindre og mindre stykker.</p>
+            <p class="pSecondary pHeading header3">Plastik i havet</p>
+            <p class="pSecondary p3">Når plastikposer ender i havet vil UV-lys og bølger nedbryde dem hurtigere. Synker den, går nedbrydningsprocessen i stå. Plastikposen vil i løbet af år fragmenteres til mindre og mindre stykker.</p>
         </div>
         </div>
     </div>
 
     <div class="infoIconSection">
         <div class="oneInfo">
-            <img src="public/img/tshirt.svg" alt="img" class="infographicicon">
+            <img src="public/img/tshirt.svg" alt="img" class="infographicicon icon4">
         <div>
-            <p class="pSecondary pHeading">Syntetiske plastikfibre</p>
-            <p class="pSecondary">Tøj af syntetiske plastikfibre (polyester, nylon, akryl), afgiver mikroplastik til spildevandet, når de fremstilles, med en lang forarbejdningsproces med tilsætning af farver og kemi.</p>
+            <p class="pSecondary pHeading header4">Syntetiske plastikfibre</p>
+            <p class="pSecondary p4">Tøj af syntetiske plastikfibre (polyester, nylon, akryl), afgiver mikroplastik til spildevandet, når de fremstilles, med en lang forarbejdningsproces med tilsætning af farver og kemi.</p>
         </div>  
     </div>
     <div></div>
@@ -55,10 +55,10 @@
     <div class="infoIconSection">
         <div></div>
         <div class="oneInfo">
-            <img src="public/img/vaskemaskine.svg" alt="img" class="infographicicon">
+            <img src="public/img/vaskemaskine.svg" alt="img" class="infographicicon icon5">
         <div>
-            <p class="pSecondary pHeading">Mikroplastik i spildevandsanlæget</p>
-            <p class="pSecondary">Når tøjet vaskes afgives der mikroplastik som bliver skyllet med vaskevandet ud i afløbet. Dernæst i spildevandsanlæget som nogle steder bliver brugt som gødning til landbruget.</p>
+            <p class="pSecondary pHeading header5">Mikroplastik i spildevandsanlæget</p>
+            <p class="pSecondary p5">Når tøjet vaskes afgives der mikroplastik som bliver skyllet med vaskevandet ud i afløbet. Dernæst i spildevandsanlæget som nogle steder bliver brugt som gødning til landbruget.</p>
         </div>
         </div>
     </div>
@@ -225,7 +225,7 @@ a:hover {
 
   gsap.from(".h1Secondary", {
       yPercent: 50,
-      duration: 1,
+      duration: 4,
       opacity: 0,
       stagger: 0.2,
       scrollTrigger: {
@@ -237,20 +237,227 @@ a:hover {
   });
 
     gsap.registerPlugin(ScrollTrigger);
-    gsap.from(".oneInfo img", {
+    gsap.from(".icon1", {
       x: 700,
       duration: 8,
       opacity: 0,
       stagger: 0.2,
       scrollTrigger: {
-        trigger: ".oneInfo img",
-        start: "top 60%",
-        end: "center 40%",
+        trigger: ".icon1",
+        start: "top 70%",
+        end: "bottom center ",
+        scrub: true,
+      }
+    });
+
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".header1", {
+      x: 700,
+      duration: 8,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".header1",
+        start: "top 90%",
+        end: "bottom center ",
+        scrub: true,
+      }
+    });
+
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".p1", {
+      x: 700,
+      duration: 8,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".p1",
+        start: "top 95%",
+        end: "bottom center ",
         scrub: true,
         markers: true,
       }
     });
 
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".icon2", {
+      x: -700,
+      duration: 8,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".icon2",
+        start: "top 80%",
+        end: "bottom center ",
+        scrub: true,
+        markers: true,
+      }
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".header2", {
+      x: -700,
+      duration: 8,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".header2",
+        start: "top 90%",
+        end: "bottom center ",
+        scrub: true,
+        markers: true,
+      }
+    });
+
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".p2", {
+      x: -700,
+      duration: 8,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".p2",
+        start: "top 70%",
+        end: "bottom center ",
+        scrub: true,
+        markers: true,
+      }
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".icon3", {
+      x: 700,
+      duration: 8,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".icon3",
+        start: "top 70%",
+        end: "bottom center ",
+        scrub: true,
+        markers: true,
+      }
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".header3", {
+      x: 700,
+      duration: 8,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".header3",
+        start: "top 80%",
+        end: "bottom center ",
+        scrub: true,
+        markers: true,
+      }
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".p3", {
+      x: 700,
+      duration: 8,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".p3",
+        start: "top 90%",
+        end: "bottom center ",
+        scrub: true,
+      }
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".icon4", {
+      x: -700,
+      duration: 8,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".icon4",
+        start: "top 70%",
+        end: "bottom center ",
+        scrub: true,
+      }
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".header4", {
+      x: -700,
+      duration: 8,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".header4",
+        start: "top 80%",
+        end: "bottom center ",
+        scrub: true,
+        markers: true,
+      }
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".p4", {
+      x: -700,
+      duration: 8,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".p4",
+        start: "top 90%",
+        end: "bottom center ",
+        scrub: true,
+      }
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".icon5", {
+      x: 700,
+      duration: 8,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".icon5",
+        start: "top 70%",
+        end: "bottom center ",
+        scrub: true,
+        markers: true,
+      }
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".header5", {
+      x: 700,
+      duration: 8,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".header5",
+        start: "top 80%",
+        end: "bottom center ",
+        scrub: true,
+        markers: true,
+      }
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".p5", {
+      x: 700,
+      duration: 8,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".p5",
+        start: "top 90%",
+        end: "bottom center ",
+        scrub: true,
+        markers: true,
+      }
+    });
 
 
 
