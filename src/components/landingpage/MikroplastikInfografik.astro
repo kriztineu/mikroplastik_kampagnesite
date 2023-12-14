@@ -212,8 +212,59 @@ a:hover {
    color: var(--primary-red);
 }
 
-
 }
 
-
 </style>
+
+<script>
+	import { gsap } from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+ 
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".h1Secondary", {
+      yPercent: 50,
+      duration: 1,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".h1Secondary",
+        start: "start 80%",
+        end: "bottom center",
+        scrub: true,
+    }
+  });
+
+  gsap.from(".oneInfo1", {
+      yPercent: 50,
+      duration: 1,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".oneInfo1",
+        start: "top 80%",
+        end: "bottom center",
+        scrub: true,
+    }
+});
+
+
+import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".oneInfo img", {
+      x: -700,
+      duration: 2,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".oneInfo img",
+        start: "top 60%",
+        end: "center 40%",
+        scrub: true,
+      }
+    });
+
+	
+</script>
