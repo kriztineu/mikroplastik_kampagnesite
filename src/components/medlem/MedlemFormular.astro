@@ -1,0 +1,45 @@
+---
+import BTN1 from "../general/BTN1.astro";
+---
+
+<section class="formBox">
+    <div class="stoetHeading">
+        <h2>Støt os i kampen</h2>
+        <p>Du kan støtte månedligt eller med engangbetaling. Alt støtte går til kampen for et plastikfrit samfund.</p>
+    </div>
+
+    <div class="antalGange">
+        <input type="radio" id="enGang" name="stoetType" class="stoetBTN1 tertiaryBTN stoetRadio" checked>
+        <label for="enGang" class="stoetBTN1 tertiaryBTN"></label>
+        <p>Én gang</p>
+    
+        <input type="radio" id="manedligt" name="stoetType" class="stoetBTN1 tertiaryBTN stoetRadio">
+        <label for="manedligt" class="stoetBTN1 tertiaryBTN"></label>
+        <p>Månedligt</p>
+    </div>
+    
+
+    <div class="stoetBeloeb">
+        <input type="radio" id="stoet50" name="stoetBeloeb" class="stoetBTN2 tertiaryBTN stoetRadio" checked>
+        <label for="stoet50" class="stoetBTN2 tertiaryBTN">50</label>
+    
+        <input type="radio" id="stoet100" name="stoetBeloeb" class="stoetBTN2 tertiaryBTN stoetRadio">
+        <label for="stoet100" class="stoetBTN2 tertiaryBTN">100</label>
+    
+        <input type="radio" id="stoet150" name="stoetBeloeb" class="stoetBTN2 tertiaryBTN stoetRadio">
+        <label for="stoet150" class="stoetBTN2 tertiaryBTN">150</label>
+    </div>
+    
+
+    <div class="stoetCTA">
+    <form class="andetBeloeb ">
+        <input type="text" id="Andet beløb" value="Andet beløb ..."></label>
+    </form>
+    
+    <div class="stoetCTA2">
+        <BTN1 data="Støt nu"/>
+        <p>Og fortsæt til betaling</p>
+    </div>
+
+    </div>
+</section>
