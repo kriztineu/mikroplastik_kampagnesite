@@ -1,14 +1,19 @@
 <section>
-<div class="primaryBoxSection">
-        <div class="pic_section">
-            <img src="../img/henrik.png" alt="">
-            <img src="../img/mathias.png" alt="">
-        </div>
-   </section>
+  <div class="primaryBoxSection">
+    <div class="pic_section">
+      <img src="../img/henrik.png" alt="">
+      <img src="../img/mathias.png" alt="">
+    </div>
+  </div>
+</section>
 
 <style>
-
+section {
+    display: flex;
+    flex-direction: row;
+  }
 .pic_section {
+    flex: 1;
     display: flex;
    justify-content: center;
 }
@@ -24,32 +29,19 @@ img {
 }
 
 @media screen and (min-width: 800px) {
+
+    .primaryBoxSection {
+        height: 40rem;
+    }
     img {
-    width: 100%;
-  }
-
-  section {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .tertiaryBoxSection {
-    flex: 1;
-    height: 10rem;
-    background-color: var(--white);
-    padding-left: 1.5rem;
     padding-top: 5rem;
-    line-height: 1.5rem;
+    width: 30%;
   }
 
   h2 {
     color: var(--primary-red);
     font-size: 17px;
     line-height: 1.5rem;
-  }
-
-  .img_section {
-    flex: 1;
   }
 
 }
