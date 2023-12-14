@@ -8,35 +8,38 @@ import BTN1 from "../general/BTN1.astro";
         <p>Støt med et medlemskab for 350 kr. / årligt</p>
     </div>
 
-    <div class="informationForm">
-        <form class="fornavn infoForm">
-            <input type="text" id="fornavn" value="Fornavn"></label>
-        </form>
-        <form class="efternavn infoForm">
-            <input type="text" id="efternavn" value="Efternavn"></label>
-        </form>
-        <form class="e-mail infoForm">
-            <input type="text" id="e-mail" value="E-mail"></label>
-        </form>
-        <form class="telefon infoForm">
-            <input type="text" id="telefon" value="Telefon"></label>
-        </form>
-    </div>
-
-    <h3 class="medlemH3">Betalingsform</h3>
-    <div class="vaelgBetaling">
-        <div class="betalingsMulighed">
-            <input type="radio" id="Mobilepay" name="betalingType" class="medlemBTN1 medlemRadio" checked>
-            <label for="Mobilepay" class="medlemBTN1"></label>
-            <p>Mobilepay</p>
+    <div class="desktopFlex">
+        <div class="informationForm">
+            <form class="fornavn infoForm">
+                <input type="text" id="fornavn" value="Fornavn"></label>
+            </form>
+            <form class="efternavn infoForm">
+                <input type="text" id="efternavn" value="Efternavn"></label>
+            </form>
+            <form class="e-mail infoForm">
+                <input type="text" id="e-mail" value="E-mail"></label>
+            </form>
+            <form class="telefon infoForm">
+                <input type="text" id="telefon" value="Telefon"></label>
+            </form>
         </div>
 
-        <div class="betalingsMulighed">
-            <input type="radio" id="Betalingskort" name="betalingType" class="medlemBTN1 medlemRadio">
-            <label for="Betalingskort" class="medlemBTN1"></label>
-            <p>Betalingskort</p>
+        <div class="betalingFlex">
+            <h3 class="medlemH3">Betalingsform</h3>
+            <div class="vaelgBetaling">
+                <div class="betalingsMulighed">
+                    <input type="radio" id="Mobilepay" name="betalingType" class="medlemBTN1 medlemRadio" checked>
+                    <label for="Mobilepay" class="medlemBTN1"></label>
+                    <p>Mobilepay</p>
+                </div>
+    
+                <div class="betalingsMulighed">
+                    <input type="radio" id="Betalingskort" name="betalingType" class="medlemBTN1 medlemRadio">
+                    <label for="Betalingskort" class="medlemBTN1"></label>
+                    <p>Betalingskort</p>
+                </div>
+            </div>
         </div>
-
     </div>
 
     <div class="blivMedlemCTA">
@@ -59,12 +62,15 @@ import BTN1 from "../general/BTN1.astro";
         width: 328px;
         height: 640px;
         padding: 2rem;
+        position: absolute;
+        margin-top: 7rem;
     }
 
     .informationForm {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        padding-bottom: 2rem;
     }
 
     label {
@@ -117,10 +123,6 @@ import BTN1 from "../general/BTN1.astro";
     outline: none; 
     }
 
-    .medlemH3 {
-        font-size: medium;
-    }
-
     .vaelgBetaling {
         display: flex;
         flex-direction: column;
@@ -146,11 +148,44 @@ import BTN1 from "../general/BTN1.astro";
         font-weight: 400;
     }
 
-    @media screen and (min-width: 800px) {
-    .formBoxMedlem {
-        width: 973px;
-        height: 700px;
-    }
+    .betalingFlex {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
 
+    @media screen and (min-width: 800px) {
+        .formBoxMedlem {
+            width: 973px;
+            height: 700px;
+            gap: 2rem;
+            margin-top: 10rem;
+        }
+        
+        .formBoxMedlem h2 {
+            width: 21.5ch;
+        }
+
+        .infoForm input {
+            width: 466px;
+            height: 57px;   
+            padding: 10px; 
+            border-radius: 8px;
+        }
+
+        .medlemHeading p {
+            width: 50ch;
+        }
+
+        .desktopFlex {
+            display: flex;
+        }
+
+        .betalingFlex {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 5rem;
+        }
     }
 </style>
