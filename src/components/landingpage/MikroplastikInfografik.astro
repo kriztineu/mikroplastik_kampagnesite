@@ -2,7 +2,7 @@
 <section>
 <h2 class="h1Secondary">Så småt, er et stort problem</h2>
 <div class="infoRoot">
-    <img src="public/img/gren.svg" alt="img" class="infographicLine">
+    <img src="public/img/gren2.svg" alt="img" class="infographicLine">
 </div>
 
 
@@ -65,11 +65,17 @@
 
 
 </section>
-
+<section class="linkTextSection">
+<a class="linkText" href="/rejsen.html">Bliv klogere på hvorfor mikroplastik er så stort et problem</a>
+</section>
 </article>
 
 
 <style>
+
+.linkText {
+    text-align: center;
+}
 
 .pHeading {
     font-size: 1.5rem;
@@ -120,11 +126,22 @@ h2 {
     margin-bottom: 5rem;
 }
 
+a {
+    color: var(--secondary--blue);
+    font-family: Campton;
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+a:hover {
+   color: var(--primary--red);
+}
+
 
 @media screen and (min-width: 800px) { 
 
     .infographicLine {
-    height: 137rem;
+    height: 170rem;
     width: auto;
 
 }
@@ -143,25 +160,57 @@ h2 {
 .infoIconSection {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5rem;
+    gap: 1rem;
     grid-column: 30rem;
 
 }
 
 .iconSection {
     position: absolute;
-    top: 120%;
+    top: 145%;
 }
 
 .oneInfo {
     display: flex;
     flex-direction: column;
-    margin-left: 6rem;
-    margin-right: 6rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
     gap: 3rem;
 }
 
+h2 {
+    text-align: center;
+    margin: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+}
 
+article {
+    margin-bottom: 20rem;
+}
+
+.linkText {
+    margin-top: 7rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.linkTextSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    color: var(--secondary--blue);
+    font-family: Campton;
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+a:hover {
+   color: var(--primary-red);
+}
 
 
 }
