@@ -3,7 +3,7 @@ import "../styles/style.css"
 import "../styles/mobil.css"
 import "../styles/desktop.css"
 const { title } = Astro.props;
-import Header from "../components/general/Header.astro";
+import HeaderProeve from "../components/general/HeaderProeve.astro";
 import Footer from "../components/general/Footer.astro";
 import SoMe from "../components/general/SoMe.astro";
 ---
@@ -25,7 +25,7 @@ import SoMe from "../components/general/SoMe.astro";
 		<title>{title}</title>
 	</head>
 	<body>
-		<Header/>
+		<HeaderProeve/>
 		<SoMe/>
 			<slot/>
 		<Footer/>
