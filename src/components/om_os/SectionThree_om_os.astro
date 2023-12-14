@@ -8,15 +8,15 @@
 </section>
 
 <style>
-section {
-    display: flex;
-    flex-direction: row;
-  }
 .pic_section {
-    flex: 1;
-    display: flex;
-   justify-content: center;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .pic_section img {
+    margin: 0 30px;
+  }
 
 .primaryBoxSection {
   background-color: var(--primary-red);
@@ -30,8 +30,20 @@ img {
 
 @media screen and (min-width: 800px) {
 
+  .pic_section img {
+  margin-right: 10px;
+  }
+
+  .pic_section {
+  display: flex;
+}
+
+.pic_section img {
+  gap: 100px;
+}
     .primaryBoxSection {
         height: 40rem;
+        width: 100%;
     }
     img {
     padding-top: 5rem;
