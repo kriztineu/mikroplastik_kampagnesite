@@ -1,61 +1,62 @@
 <section>
-  <div class="primaryBoxSection">
-    <div class="pic_section">
-      <img src="../img/henrik.png" alt="">
-      <img src="../img/mathias.png" alt="">
+  <div class="parent_container">
+    <div class="primaryBoxSection">
+      <div class="pic_section">
+        <img src="../img/henrik.png" alt="">
+        <img src="../img/mathias.png" alt="">
+      </div>
+    </div>
+
+    <div class="about_section">
+      <h2>Hvem er vi?</h2>
+      <p>Plastic Change blev grundlagt i april 2014. Initiativet til at stifte Plastic Change blev taget af miljøbiolog Henrik Beha Pedersen i samarbejde med en række frivillige kræfter. </p>
+      <p>Organisationen blev stiftet som en forening hjemme i Henriks dagligstue i Hellerup, hvor den holdt til de første år. I 2017 lykkedes det ved hjælp af fondsbevillinger at få råd til løn til en håndfuld medarbejdere og husleje i rigtige kontorlokaler.</p>
     </div>
   </div>
 </section>
 
 <style>
-.pic_section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .parent_container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically on small screens */
+  }
+
+  .primaryBoxSection {
+    background-color: var(--primary-red);
+    height: 20rem;
+    display: flex;
   }
 
   .pic_section img {
-    margin: 0 30px;
-  }
-
-.primaryBoxSection {
-  background-color: var(--primary-red);
-  height: 20rem;
-}
-
-img {
+    margin-right: 10px;
+    gap: 20px;
     width: 45%;
-    gap:2rem;
-}
-
-@media screen and (min-width: 800px) {
-
-  .pic_section img {
-  margin-right: 10px;
   }
 
-  .pic_section {
-  display: flex;
-}
-
-.pic_section img {
-  gap: 100px;
-}
-    .primaryBoxSection {
-        height: 40rem;
-        width: 100%;
-    }
-    img {
-    padding-top: 5rem;
-    width: 30%;
-  }
-
-  h2 {
+  .about_section {
+    flex: 1; /* Take remaining space in the container */
+    padding: 1.5rem;
     color: var(--primary-red);
-    font-size: 17px;
-    line-height: 1.5rem;
   }
 
-}
+  @media screen and (min-width: 800px) {
+    .parent_container {
+      flex-direction: row; /* Arrange children side by side on larger screens */
+    }
 
+    .primaryBoxSection {
+      height: 40rem;
+      width: 50%; /* Adjust as needed */
+    }
+
+    .pic_section img {
+      padding-top: 8rem;
+      gap: 100px;
+      margin-left: 1rem;
+    }
+
+    .about_section {
+      padding: 3rem;
+    }
+  }
 </style>
