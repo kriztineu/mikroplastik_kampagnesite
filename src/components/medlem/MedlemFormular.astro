@@ -2,44 +2,155 @@
 import BTN1 from "../general/BTN1.astro";
 ---
 
-<section class="formBox">
-    <div class="stoetHeading">
-        <h2>Støt os i kampen</h2>
-        <p>Du kan støtte månedligt eller med engangbetaling. Alt støtte går til kampen for et plastikfrit samfund.</p>
+<section class="formBoxMedlem formBox">
+    <div class="medlemHeading">
+        <h2>Bliv medlem og tag del i kampen mod plastikforurening</h2>
+        <p>Støt med et medlemskab for 350 kr. / årligt</p>
     </div>
 
-    <div class="antalGange">
-        <input type="radio" id="enGang" name="stoetType" class="stoetBTN1 tertiaryBTN stoetRadio" checked>
-        <label for="enGang" class="stoetBTN1 tertiaryBTN"></label>
-        <p>Én gang</p>
-    
-        <input type="radio" id="manedligt" name="stoetType" class="stoetBTN1 tertiaryBTN stoetRadio">
-        <label for="manedligt" class="stoetBTN1 tertiaryBTN"></label>
-        <p>Månedligt</p>
-    </div>
-    
-
-    <div class="stoetBeloeb">
-        <input type="radio" id="stoet50" name="stoetBeloeb" class="stoetBTN2 tertiaryBTN stoetRadio" checked>
-        <label for="stoet50" class="stoetBTN2 tertiaryBTN">50</label>
-    
-        <input type="radio" id="stoet100" name="stoetBeloeb" class="stoetBTN2 tertiaryBTN stoetRadio">
-        <label for="stoet100" class="stoetBTN2 tertiaryBTN">100</label>
-    
-        <input type="radio" id="stoet150" name="stoetBeloeb" class="stoetBTN2 tertiaryBTN stoetRadio">
-        <label for="stoet150" class="stoetBTN2 tertiaryBTN">150</label>
-    </div>
-    
-
-    <div class="stoetCTA">
-    <form class="andetBeloeb ">
-        <input type="text" id="Andet beløb" value="Andet beløb ..."></label>
-    </form>
-    
-    <div class="stoetCTA2">
-        <BTN1 data="Støt nu"/>
-        <p>Og fortsæt til betaling</p>
+    <div class="informationForm">
+        <form class="fornavn infoForm">
+            <input type="text" id="fornavn" value="Fornavn"></label>
+        </form>
+        <form class="efternavn infoForm">
+            <input type="text" id="efternavn" value="Efternavn"></label>
+        </form>
+        <form class="e-mail infoForm">
+            <input type="text" id="e-mail" value="E-mail"></label>
+        </form>
+        <form class="telefon infoForm">
+            <input type="text" id="telefon" value="Telefon"></label>
+        </form>
     </div>
 
+    <h3 class="medlemH3">Betalingsform</h3>
+    <div class="vaelgBetaling">
+        <div class="betalingsMulighed">
+            <input type="radio" id="Mobilepay" name="betalingType" class="medlemBTN1 medlemRadio" checked>
+            <label for="Mobilepay" class="medlemBTN1"></label>
+            <p>Mobilepay</p>
+        </div>
+
+        <div class="betalingsMulighed">
+            <input type="radio" id="Betalingskort" name="betalingType" class="medlemBTN1 medlemRadio">
+            <label for="Betalingskort" class="medlemBTN1"></label>
+            <p>Betalingskort</p>
+        </div>
+
     </div>
+
+    <div class="blivMedlemCTA">
+        <BTN1 data="Bliv medlem"/>
+        <!-- <p>Og modtag b.la. vores månedlige nyhedsbrev</p> -->
+    </div>
+
 </section>
+
+<style>
+
+    .medlemHeading p {
+        width: 20ch;
+        padding-top: 10px;
+    }
+    .formBoxMedlem {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 328px;
+        height: 640px;
+        padding: 2rem;
+    }
+
+    .informationForm {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    label {
+    font-family: Campton;
+    }
+
+    .medlemBTN1 {
+        display: flex;
+        border-radius: 50%;
+        height: 16px;
+        width: 16px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        border-style: solid;
+    }
+
+    .medlemRadio {
+        display: none; /* Hide the actual radio buttons */
+    } 
+
+    .medlemRadio + label {
+        color: var(--white);
+        background-color: var(--dark-blue);
+    }
+
+    .medlemRadio:checked + label {
+        color: var(--white);
+        background-color: var(--white);
+        }
+
+    .infoForm input {
+        border-color: 2px solid var(--white);
+        border-style: solid;
+        background-color: transparent;
+        color: var(--light-grey);
+        width: 260px; 
+        height: 52px; 
+        padding: 10px; 
+        border-radius: 8px;
+    }
+
+    .infoForm input:hover {
+        color: var(--white);
+    }
+
+    .infoForm input:focus {
+    border-color: var(--primary-red);
+    outline: none; 
+    }
+
+    .medlemH3 {
+        font-size: medium;
+    }
+
+    .vaelgBetaling {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-left: 10px;
+    }
+
+    .betalingsMulighed{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 12px;
+    }
+    .blivMedlemCTA {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blivMedlemCTA p {
+        font-size: 10px;
+        font-style: italic;
+        font-weight: 400;
+    }
+
+    @media screen and (min-width: 800px) {
+    .formBoxMedlem {
+        width: 973px;
+        height: 700px;
+    }
+
+    }
+</style>
