@@ -23,11 +23,14 @@ import BTN2 from "./BTN2.astro";
     <div class="overlaymenu-container">
         <div class="icons-close">
           <ul class="ulicons">
-                <li class="burger-menu2"><img src="public/burgermenu.svg" alt="Burger-Menu2" /></li>
-                <li><a href="/stoet.html">Støt nu</a></li>
-                <li><a href="/blivmedlem.html">Bliv medlem</a></li>
-                <li><a href="/om-os.html">Om os</a></li>
-                <li><a href="/rejsen.html">Rejse</a></li>
+                <li class="burger-menu2"><img src="public/burgermenu-luk.svg" alt="Burger-Menu2" /></li>
+                <div class="storMenu">
+                    <li><a href="/stoet.html">Støt nu</a></li>
+                    <li><a href="/blivmedlem.html">Bliv medlem</a></li>
+                    <li><a href="/om-os.html">Om os</a></li>
+                    <li><a href="/rejsen.html">Rejse</a></li>
+                </div>
+                
           </ul>
           </div>
     </div>
@@ -105,10 +108,17 @@ import BTN2 from "./BTN2.astro";
     z-index: 99;
   }
 
-  .icons-close {
+  .burger-menu2 {
     display: flex;
     justify-content: right;
     text-align: right;
+  }
+
+  .storMenu {
+    display: flex;
+    justify-content: left;
+    padding-left: 30rem;
+    flex-direction: column;
   }
 
   .icons-close ul {
@@ -116,19 +126,22 @@ import BTN2 from "./BTN2.astro";
     flex-direction: column;
     list-style-type: none;
     z-index: 1000;
-    padding-top: 2rem;
     padding-right: 2rem;
+    padding-top: 4rem;
   }
 
   .icons-close a {
-    padding-top: 4rem;
+    padding-top: 2rem;
     padding-right: 2rem;
     display: block;
     z-index: 1000;
     color: var(--white);
-    font-size: x-large;
+    font-family: Campton;
+    font-weight: 700;
+    font-size: 70px;
     text-decoration-color: var(--dark-blue);
   }
+
 
     @media screen and (min-width: 800px) {
         section {
