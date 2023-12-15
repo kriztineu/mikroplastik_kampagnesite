@@ -1,20 +1,20 @@
 ---
-import BTN1 from "./BTN1.astro";
-import BTN2 from "./BTN2.astro";
+import BTNmikro from "./BTNmikro.astro";
+import BTNheart from "./BTNheart.astro";
 ---
 
 <header>
     <div class="menu-container">
         <div class="main-menu">
             <div class="logo-container">
-                <li><a href="/index.html"><img src="public/logo.png" class="logo" alt="Plastic Change Logo"/></a></li>
+                <li><a href="/index.html"><img src="/logo.png" class="logo" alt="Plastic Change Logo"/></a></li>
             </div>
         
             <div class="icons">
               <ul>
-                <li><a class="menuBTN" href="/rejsen.html"><BTN1 data="Mission mikroplastik"/></a></li>
-                <li><a class="menuBTN" href="/stoet.html"><BTN2 data="Støt"/></a></li>
-                <li class="burger-menu"><img src="public/burgermenu.svg" alt="Burger-Menu" /></li>
+                <li><a class="menuBTN" href="/rejsen.html"><BTNmikro class="mikroplastBTN" data="Mission mikroplastik"/></a></li>
+                <li><a class="menuBTN" href="/stoet.html"><BTNheart data="Støt"/></a></li>
+                <li class="burger-menu"><img src="/burgermenu.svg" alt="Burger-Menu" /></li>
               </ul>
             </div>
           </div>
@@ -23,12 +23,13 @@ import BTN2 from "./BTN2.astro";
     <div class="overlaymenu-container">
         <div class="icons-close">
           <ul class="ulicons">
-                <li class="burger-menu2"><img src="public/burgermenu-luk.svg" alt="Burger-Menu2" /></li>
+                <li class="burger-menu2"><img src="/burgermenu-luk.svg" alt="Burger-Menu2" /></li>
                 <div class="storMenu">
+                    <li><a href="/om_os.html">Om os</a></li>
                     <li><a href="/stoet.html">Støt nu</a></li>
                     <li><a href="/blivmedlem.html">Bliv medlem</a></li>
-                    <li><a href="/om_os.html">Om os</a></li>
-                    <li><a href="/rejsen.html">Rejse</a></li>
+                    <li><a href="/rejsen.html">Mission Mikroplastik</a></li>
+                    <hr>
                 </div>
                 
           </ul>
@@ -39,12 +40,17 @@ import BTN2 from "./BTN2.astro";
 
 
 <style>
+
+  hr {
+        border: 0.5px solid var(--white);
+        margin-top: 40px;
+        width: 17rem;
+  }
     header{
     display: flex;
     justify-content: space-between;
     list-style-type: none;
     z-index: 1000;
-    /* position: absolute; */
     }
 
     .main-menu {
@@ -56,6 +62,7 @@ import BTN2 from "./BTN2.astro";
     .menu-container {
         position: absolute;
         z-index: 10000;
+        width: 100%;
     }
 
   .icons ul {
@@ -112,12 +119,13 @@ import BTN2 from "./BTN2.astro";
     display: flex;
     justify-content: right;
     text-align: right;
+    z-index: 2000;
   }
 
   .storMenu {
     display: flex;
     justify-content: left;
-    padding-left: 30rem;
+    padding-left: 5rem;
     flex-direction: column;
     padding-top: 4rem;
   }
@@ -144,24 +152,43 @@ import BTN2 from "./BTN2.astro";
     color: var(--white);
     font-family: Campton;
     font-weight: 700;
-    font-size: 70px;
+    font-size: 40px;
+  }
+
+  .menuBTN {
+    display: none;
   }
 
 
     @media screen and (min-width: 800px) {
-        section {
-        height: 100vh;
+
+      hr {
+        border: 0.5px solid var(--white);
+        margin-top: 40px;
+        width: 45rem;
+  }
+      header {
+      z-index: 1000;
+      }
+
+      .menuBTN {
+      display: block;
     }
 
-    h1 {  
-        margin-top: 10%;
-    }
-
-    header {
-    z-index: 1000;
+    .icons-close a {
+    padding-top: 2rem;
+    padding-right: 2rem;
     display: block;
-    }
-
+    z-index: 1000;
+    color: var(--white);
+    font-family: Campton;
+    font-weight: 700;
+    font-size: 70px;
+  }
+  .storMenu {
+    padding-left: 23rem;
+    padding-top: 4rem;
+  }
     }
 
 </style>

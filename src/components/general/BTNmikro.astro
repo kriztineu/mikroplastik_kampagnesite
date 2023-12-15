@@ -1,0 +1,30 @@
+---
+const { data } = Astro.props;
+---
+
+<button class="BTN">
+    <p class="secondaryBTNText">{data}</p>
+</button>
+
+<style> /* RET TIL DE NYE KNAPPER */
+
+    button {
+        background-color: transparent;
+        border: 2px solid var(--white);
+        width: 13rem;
+    }
+
+    button p {
+        color: var(--white);
+    }
+
+    button:hover {
+        background-color: var(--white);
+    }
+
+    button:hover p {
+        color: var(--dark-blue);
+    }
+</style>
+
+
