@@ -1,4 +1,8 @@
-<section class="SoMe primaryBoxSection">
+---
+const { bg } = Astro.props;
+---
+
+<section class=`SoMe primaryBoxSection ${bg}`>
     <a class="SoMeIcon" href="https://www.facebook.com/plasticchange"><img src="/icons/fb-icon.svg" class="icon" alt=""></a>
     <a class="SoMeIcon" href="https://www.instagram.com/plasticchange/"><img src="/icons/insta-icon.svg" class="icon" alt=""></a>
     <a class="SoMeIcon" href="https://plasticchange.dk/"><img src="/icons/tiktok-icon.svg" class="icon" alt=""></a>
@@ -19,6 +23,11 @@
     gap: 8px;
     z-index: 900;
     cursor: pointer;
+}
+
+.blue{
+    background-color: var(--dark-blue);
+    z-index: 9999999;
 }
 
 img {

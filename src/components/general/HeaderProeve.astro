@@ -36,9 +36,9 @@ import SoMe from "./SoMe.astro";
                     <li><a href="/rejsen.html">Mission Mikroplastik</a></li>
                     <hr>
               </div>
-              <div class="SoMe" style="background-color: var(--dark-blue);">
-                <SoMe />
-              </div>
+              <!-- <div class="SoMe" style="background-color: var(--dark-blue);">
+                <SoMe bg="blue"/>
+              </div> -->
           </ul>
           </div>
     </div>
@@ -223,14 +223,19 @@ import SoMe from "./SoMe.astro";
   const close = document.querySelector(".burger-menu2");
   const close2 = document.querySelector("section");
 
+  const some = document.querySelector(".SoMe")
+
   burgermenu.addEventListener("click", function () {
     overlaymenu.classList.add("open");
     document.body.classList.add("menu-open"); // Add this line
+    some.classList.toggle("blue")
   });
 
   close.addEventListener("click", function () {
     overlaymenu.classList.remove("open");
     document.body.classList.remove("menu-open"); // Add this line
+    some.classList.toggle("blue")
+
   });
 
   close2.addEventListener("click", function () {
