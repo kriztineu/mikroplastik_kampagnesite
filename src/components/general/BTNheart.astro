@@ -3,9 +3,8 @@ const { data } = Astro.props;
 ---
 
 <button class="secondaryBTN BTN">
-    <img src="" alt="">
     <img class="secondaryBTNText" src="/svg/heart.svg" alt="">
-    <p class="">{data}</p>
+    <p class="pdata">{data}</p>
 </button>
 
 <style> /* RET TIL DE NYE KNAPPER */
@@ -15,12 +14,15 @@ const { data } = Astro.props;
         justify-content: center;
         align-items: center;
         padding-right: 23px;
+        text-decoration: none;
     }
+
     button:hover {
         background-color: var(--primary-red);
     }
 
     button:hover p {
         color: var(--white);
+        text-decoration: none;
     }
 </style>
