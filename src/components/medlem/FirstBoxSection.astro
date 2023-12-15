@@ -59,6 +59,25 @@ span{
     }
 }
 
-
-
 </style>
+
+<script>
+    import { gsap } from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+ 
+
+  gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".headingBox", {
+      x: -700,
+      duration: 8,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".tertiaryBoxSection",
+        start: "top 90%",
+        end: "bottom bottom ",
+        scrub: true,
+      }
+    });
+</script>
