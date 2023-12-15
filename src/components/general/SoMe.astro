@@ -10,7 +10,17 @@ const { bg } = Astro.props;
 </section>
 
 <style>
-.SoMe {
+
+section {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+
+    section {
+        display: block;
+    }
+    .SoMe {
     width: 50px;
     height: 140px;
     display: flex;
@@ -36,6 +46,7 @@ img {
 
 .SoMe:hover {
     background-color: var(--dark-blue);
+}
 }
 
 </style>
