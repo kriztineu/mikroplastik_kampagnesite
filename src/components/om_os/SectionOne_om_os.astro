@@ -63,8 +63,10 @@ object-fit: cover;
     }
 
   .red_section_p {
-font-size: 25px;
-line-height: 2rem;
+font-size: 30px;
+line-height: 3rem;
+padding-left: 7rem;
+padding-right: 7rem;
 }
 
 .primaryBoxSection {
@@ -72,13 +74,12 @@ display: flex;
 align-items: center;
   justify-content: center;
   background-color: var(--primary-red);
-  height: 20rem;
+  height: 25rem;
 }
 
 .text-container {
   position: absolute;
   top: 65%;
- padding-left: 2rem;
 
 }
 
@@ -92,4 +93,26 @@ align-items: center;
 </style>
 
 
+<script>
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+ 
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".red_section_p", {
+      yPercent: 50,
+      duration: 4,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".primaryBoxSection",
+        start: "center center",
+        end: "bottom",
+        scrub: true,
+        markers: true,
+    }
+  });
+
+</script>
