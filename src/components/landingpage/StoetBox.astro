@@ -93,3 +93,25 @@ import BTN1 from "../general/BTN1.astro";
 }
 
 </style>
+
+<script>
+    import { gsap } from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+ 
+
+  gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".stoetBox ", {
+      x: -700,
+      duration: 8,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".stoetBox ",
+        start: "top 90%",
+        end: "bottom center ",
+        scrub: true,
+        markers: true,
+      }
+    });
+</script>
