@@ -7,8 +7,10 @@ import BTN1 from "./BTN1.astro";
     <div class="secondaryBoxSection FooterBlaa">
         <h1 class = h1Footer>Gå ikke glip af nyhedsbrevet!</h1>
         <form class="nyhedsBrev">
-            <input type="text" id="E-mail" value="Skriv din e-mail her"></label>
-
+            <div class="nbInput">
+                <input type="text" id="E-mail" value="Skriv din e-mail her"></label>
+                <BTN1 data="Tilmeld"/>
+            </div>
             <p>Følg med i vores arbejde mod plastikforurening, og hold dig opdateret med de seneste nyheder</p>
         </form>
     </div>
@@ -35,22 +37,51 @@ import BTN1 from "./BTN1.astro";
             </ul>
         <div/>
     </div>
-     <p>© 2024 Plastic Change</p> <!--Den læser koden forkert. Denne p burde stå indeni! -->
+     <p class="copyright">© 2024 Plastic Change</p> <!--Den læser koden forkert. Denne p burde stå indeni! -->
 
 
 </footer>
 
 <style>
 
+    .nyhedsBrev {
+        display: flex;
+        flex-direction: column;
+        width: 324px;
+        height: 38px;
+        gap: 15px;
+        justify-content: center;
+        align-items: left;
+    }
+
+    .nbInput {
+        display: flex;
+        gap: 20px;
+    }
+
+    .nbInput input {
+        background-color: transparent;
+        color: var(--light-grey);
+        opacity: 80%;
+        padding-bottom: 10px;
+        padding-right: 20px;
+        border-style: none;
+        border-bottom: 2px solid var(--light-grey);
+        font-size: 13px;
+        font-style: italic;
+    }
+
     .nyhedsBrev p {
-        font-size: 15px;
+        font-size: 11px;
+        margin-bottom: 2rem;
+        width: 35ch;
+        text-align: left;
     }
     
     .FooterBlaa {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 70px;
+        gap: 11rem;
         padding: 2rem;
         width: 100%;
     }
@@ -79,10 +110,30 @@ import BTN1 from "./BTN1.astro";
     p {
         text-align: center;
         padding-bottom: 2rem;
+        font-size: 15px;
+        font-family: Campton;
     }
 
 
     @media screen and (min-width: 800px) {
+
+        .nyhedsBrev {
+            width: 500px;
+            height: 47px;
+        }
+
+        .nbInput input {
+        font-size: 18px;
+        }
+
+        .nyhedsBrev p {
+            font-size: 13px;
+            width: 45ch;
+        }
+
+        .FooterBlaa {
+            align-items: center;
+        }
         footer {
         display: grid;
         grid-template-columns: 1.5fr 2fr;
@@ -94,6 +145,7 @@ import BTN1 from "./BTN1.astro";
         .FooterRoed {
         flex-direction: row;
         gap: 160px;
+        padding-left: 4rem;
         }
 
         ul {
@@ -104,9 +156,12 @@ import BTN1 from "./BTN1.astro";
         p {
         text-align: left;
         padding-bottom: 2rem;
-        padding: 2rem;
         }
-        
+
+        .copyright {
+            padding-left: 4rem;
+            font-size: 13px;
+        }
     }
     
 </style>
