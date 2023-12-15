@@ -9,8 +9,10 @@
 
     <div class="secondaryBoxSection">
       <h2 class="hvem_er_vi">Hvem er vi?</h2>
-      <p>Plastic Change blev grundlagt i april 2014. Initiativet til at stifte Plastic Change blev taget af miljøbiolog Henrik Beha Pedersen i samarbejde med en række frivillige kræfter. </p>
-      <p>Organisationen blev stiftet som en forening hjemme i Henriks dagligstue i Hellerup, hvor den holdt til de første år. I 2017 lykkedes det ved hjælp af fondsbevillinger at få råd til løn til en håndfuld medarbejdere og husleje i rigtige kontorlokaler.</p>
+      <div class="hvem_er_vi_p">
+        <p>Plastic Change blev grundlagt i april 2014. Initiativet til at stifte Plastic Change blev taget af miljøbiolog Henrik Beha Pedersen i samarbejde med en række frivillige kræfter. </p>
+        <p>Organisationen blev stiftet som en forening hjemme i Henriks dagligstue i Hellerup, hvor den holdt til de første år. I 2017 lykkedes det ved hjælp af fondsbevillinger at få råd til løn til en håndfuld medarbejdere og husleje i rigtige kontorlokaler.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -19,10 +21,11 @@
 
 .secondaryBoxSection {
   padding-bottom: 1.5rem;
+  hyphens: auto;
 }
   .parent_container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
   }
 
   .primaryBoxSection {
@@ -51,10 +54,11 @@
   }
 
 p {
-padding-left: 3rem;
-padding-bottom: 2rem;
+  padding-left: 3rem;
+  padding-bottom: 2rem;
   line-height: 1.3rem;
   padding-right: 2rem;
+  hyphens: auto;
 }
 
 h2 {
@@ -67,20 +71,21 @@ h2 {
 
     .secondaryBoxSection {
       height: 40rem;
+      padding: 1rem;
     }
 
     p {
-padding-left: 4rem;
-padding-bottom: 2rem;
-  line-height: 1.5rem;
-  padding-right: 4rem;
-}
+      padding-left: 4rem;
+      padding-bottom: 2rem;
+      line-height: 1.5rem;
+      padding-right: 4rem;
+    }
 
-h2 {
-  padding-bottom: 2rem;
-  padding-top: 7rem;
-  padding-left: 4rem;
-}
+    h2 {
+      padding-bottom: 2rem;
+      padding-top: 7rem;
+      padding-left: 4rem;
+    }
     .parent_container {
       flex-direction: row; 
     }
