@@ -27,7 +27,7 @@ import BTN2 from "./BTN2.astro";
                 <div class="storMenu">
                     <li><a href="/stoet.html">Støt nu</a></li>
                     <li><a href="/blivmedlem.html">Bliv medlem</a></li>
-                    <li><a href="/om-os.html">Om os</a></li>
+                    <li><a href="/om_os.html">Om os</a></li>
                     <li><a href="/rejsen.html">Rejse</a></li>
                 </div>
                 
@@ -88,7 +88,7 @@ import BTN2 from "./BTN2.astro";
 
   .burger-menu:hover, .burger-menu2:hover {
     opacity: 0.7;
-  transition: 0.5s ease;
+    transition: 0.5s ease;
     }
 
   body .open {
@@ -119,6 +119,7 @@ import BTN2 from "./BTN2.astro";
     justify-content: left;
     padding-left: 30rem;
     flex-direction: column;
+    padding-top: 4rem;
   }
 
   .icons-close ul {
@@ -127,7 +128,12 @@ import BTN2 from "./BTN2.astro";
     list-style-type: none;
     z-index: 1000;
     padding-right: 2rem;
-    padding-top: 4rem;
+  }
+
+  .storMenu a:hover {
+    color: var(--dark-blue);
+    text-decoration: none;
+    cursor: pointer;
   }
 
   .icons-close a {
@@ -139,7 +145,6 @@ import BTN2 from "./BTN2.astro";
     font-family: Campton;
     font-weight: 700;
     font-size: 70px;
-    text-decoration-color: var(--dark-blue);
   }
 
 
