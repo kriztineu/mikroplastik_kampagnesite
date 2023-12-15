@@ -7,8 +7,8 @@
       </div>
     </div>
 
-    <div class="about_section">
-      <h2>Hvem er vi?</h2>
+    <div class="secondaryBoxSection">
+      <h2 class="hvem_er_vi">Hvem er vi?</h2>
       <p>Plastic Change blev grundlagt i april 2014. Initiativet til at stifte Plastic Change blev taget af miljøbiolog Henrik Beha Pedersen i samarbejde med en række frivillige kræfter. </p>
       <p>Organisationen blev stiftet som en forening hjemme i Henriks dagligstue i Hellerup, hvor den holdt til de første år. I 2017 lykkedes det ved hjælp af fondsbevillinger at få råd til løn til en håndfuld medarbejdere og husleje i rigtige kontorlokaler.</p>
     </div>
@@ -16,43 +16,84 @@
 </section>
 
 <style>
+
+.secondaryBoxSection {
+  height: 20rem;
+}
   .parent_container {
     display: flex;
-    flex-direction: column; /* Stack children vertically on small screens */
+    flex-direction: column; 
   }
 
   .primaryBoxSection {
     background-color: var(--primary-red);
-    height: 20rem;
     display: flex;
+    flex-direction: column;
+    align-items: center; 
+    height: 20rem;
+  }
+
+  .pic_section {
+    display: flex;
+    gap: 30px;
   }
 
   .pic_section img {
-    margin-right: 10px;
-    gap: 20px;
+    padding-top: 3rem;
     width: 45%;
+    padding-left: 1rem;
   }
 
   .about_section {
-    flex: 1; /* Take remaining space in the container */
+    flex: 1; 
     padding: 1.5rem;
     color: var(--primary-red);
   }
 
+p {
+padding-left: 3rem;
+padding-bottom: 2rem;
+  line-height: 1.3rem;
+  padding-right: 2rem;
+}
+
+h2 {
+  padding-bottom: 2rem;
+  padding-top: 3rem;
+  padding-left: 3rem;
+}
+
   @media screen and (min-width: 800px) {
+
+    .secondaryBoxSection {
+      height: 40rem;
+    }
+
+    p {
+padding-left: 4rem;
+padding-bottom: 2rem;
+  line-height: 1.5rem;
+  padding-right: 4rem;
+}
+
+h2 {
+  padding-bottom: 2rem;
+  padding-top: 7rem;
+  padding-left: 4rem;
+}
     .parent_container {
-      flex-direction: row; /* Arrange children side by side on larger screens */
+      flex-direction: row; 
     }
 
     .primaryBoxSection {
       height: 40rem;
-      width: 50%; /* Adjust as needed */
+      width: 50%; 
     }
 
     .pic_section img {
       padding-top: 8rem;
       gap: 100px;
-      margin-left: 1rem;
+      margin-left: 0.5rem;
     }
 
     .about_section {
@@ -60,3 +101,5 @@
     }
   }
 </style>
+
+
