@@ -108,3 +108,62 @@ import StoetFormular from "./StoetFormular.astro";
 
     }
 </style>
+
+<script>
+    import { gsap } from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+ 
+
+  gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".h2Secondary", {
+      x: 700,
+      duration: 8,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".h2Secondary",
+        start: "top 90%",
+        end: "bottom center ",
+        scrub: true,
+        markers: true,
+      }
+    });
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
+gsap.from(".h3Secondary", {
+  x: 700,
+  duration: 8,
+  opacity: 0,
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: ".h3Secondary",
+    start: "top 90%",
+    end: "bottom center ",
+    scrub: true,
+    markers: true,
+  }
+});
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
+gsap.from(".stoetIkoner", {
+  x: 700,
+  duration: 8,
+  opacity: 0,
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: ".stoetIkoner",
+    start: "top 90%",
+    end: "bottom center ",
+    scrub: true,
+    markers: true,
+  }
+});
+
+
+
+
+
+</script>
