@@ -6,6 +6,8 @@ const { title } = Astro.props;
 import HeaderProeve from "../components/general/HeaderProeve.astro";
 import Footer from "../components/general/Footer.astro";
 import SoMe from "../components/general/SoMe.astro";
+import InstaBanner from "../components/general/InstaBanner.astro";
+import InstagramSection from "../components/general/InstagramSection.astro";
 ---
 
 <html lang="da">
@@ -28,6 +30,7 @@ import SoMe from "../components/general/SoMe.astro";
 		<HeaderProeve/>
 		<SoMe/>
 			<slot/>
+		<InstagramSection/>
 		<Footer/>
 	</body>
 </html>
