@@ -19,3 +19,28 @@
     }
 
 </style>
+
+<script>
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+ 
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".h1Secondary", {
+      yPercent: 50,
+      duration: 4,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".h1Secondary",
+        start: "start 80%",
+        end: "bottom center",
+        scrub: true,
+    }
+  });
+
+
+
+
+</script>

@@ -59,7 +59,34 @@ label {
         position: absolute;
         margin: 2.5rem;
         margin-top: 10rem;
-    }
+}
+
+.formBox { 
+
+}
+/* Define the slide-out-up animation *//* Define the small slide-up animation */
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px); /* Adjust the distance to slide */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to your element */
+.formBox {
+  animation: slideUp 0.5s ease-in-out; /* Adjust duration and timing function as needed */
+}
+
+/* Optionally, you can add a class to keep the element hidden after the animation */
+.formBox.hidden {
+  display: none;
+}
+
 
     .stoetHeading {
         display: flex;
