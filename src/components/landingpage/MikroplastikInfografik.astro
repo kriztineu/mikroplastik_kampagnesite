@@ -456,6 +456,18 @@ a:hover {
       }
     });
 
+    gsap.from(".linkText", {
+      yPercent: 50,
+      duration: 4,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".linkText",
+        start: "start 80%",
+        end: "bottom center",
+        scrub: true,
+    }
+  });
 
 
 
