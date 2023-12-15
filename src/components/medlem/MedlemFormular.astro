@@ -51,6 +51,22 @@ import BTN1 from "../general/BTN1.astro";
 
 <style>
 
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px); 
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.formBoxMedlem {
+  animation: slideUp 0.5s ease-in-out; 
+}
+
     .medlemHeading p {
         width: 20ch;
         padding-top: 10px;
