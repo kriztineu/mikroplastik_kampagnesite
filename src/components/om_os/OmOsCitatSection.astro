@@ -2,7 +2,7 @@
         <div class="tertiaryBoxSection">
         <p class="citat">"</p>
         <h2>Plastik definerer vores kultur. Vi må ikke lade den definere vores fremtid.</h2>
-        <p>Henrik Beha Pedersen, 2014</p>   
+        <p class="beha">Henrik Beha Pedersen, 2014</p>   
     </div>
 
         <div class="img_section">
@@ -62,6 +62,7 @@ h2 {
 
     img {
     width: 100%;
+    height: 100%;
   }
 
   section {
@@ -83,5 +84,56 @@ h2 {
   }
 }
 
-  
 </style>
+
+<script>
+
+import { gsap } from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+  gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".citat", {
+      x: -700,
+      duration: 8,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".tertiaryBoxSection",
+        start: "top 90%",
+        end: "bottom center ",
+        scrub: true,
+      }
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from("h2", {
+      x: -700,
+      duration: 8,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".citat",
+        start: "top 80%",
+        end: "bottom center ",
+        scrub: true,
+      }
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".beha", {
+      x: -700,
+      duration: 8,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: "h2",
+        start: "top 80%",
+        end: "bottom center ",
+        scrub: true,
+      }
+    });
+
+
+
+</script>
