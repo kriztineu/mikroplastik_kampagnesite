@@ -1,6 +1,7 @@
 ---
 import BTNmikro from "./BTNmikro.astro";
 import BTNheart from "./BTNheart.astro";
+import SoMe from "./SoMe.astro";
 ---
 
 <header>
@@ -22,16 +23,22 @@ import BTNheart from "./BTNheart.astro";
 
     <div class="overlaymenu-container">
         <div class="icons-close">
+          <div class="whiteLogo">
+            <li><a href="/index.html"><img src="/logo_white.png" class="logo" alt="Plastic Change Logo"/></a></li>
+          </div>
           <ul class="ulicons">
-                <li class="burger-menu2"><img src="/burgermenu-luk.svg" alt="Burger-Menu2" /></li>
+              <li class="burger-menu2"><img src="/burgermenu-luk.svg" alt="Burger-Menu2" /></li>
+
                 <div class="storMenu">
                     <li><a href="/om_os.html">Om os</a></li>
                     <li><a href="/stoet.html">Støt nu</a></li>
                     <li><a href="/blivmedlem.html">Bliv medlem</a></li>
                     <li><a href="/rejsen.html">Mission Mikroplastik</a></li>
                     <hr>
-                </div>
-                
+              </div>
+              <div class="SoMe" style="background-color: var(--dark-blue);">
+                <SoMe />
+              </div>
           </ul>
           </div>
     </div>
@@ -41,6 +48,14 @@ import BTNheart from "./BTNheart.astro";
 
 <style>
 
+  .SoMe {
+    background-color: var(--dark-blue);
+    z-index: 1000;
+  }
+
+  .whiteLogo a {
+    position: absolute;
+  }
   hr {
         border: 0.5px solid var(--white);
         margin-top: 40px;
@@ -64,6 +79,11 @@ import BTNheart from "./BTNheart.astro";
         z-index: 10000;
         width: 100%;
     }
+    
+    body.menu-open .menu-container {
+  display: none;
+}
+
 
   .icons ul {
     display: flex;
@@ -130,12 +150,17 @@ import BTNheart from "./BTNheart.astro";
     padding-top: 4rem;
   }
 
+  .storMenu a {
+    padding-top: 2rem;
+  }
+
   .icons-close ul {
     display: flex;
     flex-direction: column;
     list-style-type: none;
     z-index: 1000;
     padding-right: 2rem;
+    padding: 1rem;
   }
 
   .storMenu a:hover {
@@ -145,7 +170,6 @@ import BTNheart from "./BTNheart.astro";
   }
 
   .icons-close a {
-    padding-top: 2rem;
     padding-right: 2rem;
     display: block;
     z-index: 1000;
@@ -176,7 +200,6 @@ import BTNheart from "./BTNheart.astro";
     }
 
     .icons-close a {
-    padding-top: 2rem;
     padding-right: 2rem;
     display: block;
     z-index: 1000;
@@ -186,34 +209,41 @@ import BTNheart from "./BTNheart.astro";
     font-size: 70px;
   }
   .storMenu {
-    padding-left: 23rem;
+    padding-left: 21rem;
     padding-top: 4rem;
   }
-    }
+
+  }
 
 </style>
 
 <script>
-    const overlaymenu = document.querySelector(".overlaymenu-container");
-    const burgermenu = document.querySelector(".burger-menu");
-    const close = document.querySelector(".burger-menu2");
-    const close2 = document.querySelector("section");
-  
-    burgermenu.addEventListener("click", function () {
-      overlaymenu.classList.add("open");
-    });
-  
-    close.addEventListener("click", function () {
-      overlaymenu.classList.remove("open");
-    });
+  const overlaymenu = document.querySelector(".overlaymenu-container");
+  const burgermenu = document.querySelector(".burger-menu");
+  const close = document.querySelector(".burger-menu2");
+  const close2 = document.querySelector("section");
 
-    close2.addEventListener("click", function () {
-      overlaymenu.classList.remove("open");
-    });
+  burgermenu.addEventListener("click", function () {
+    overlaymenu.classList.add("open");
+    document.body.classList.add("menu-open"); // Add this line
+  });
 
-    overlaymenu.addEventListener("click", function () {
-      overlaymenu.classList.remove("open");
-    });
+  close.addEventListener("click", function () {
+    overlaymenu.classList.remove("open");
+    document.body.classList.remove("menu-open"); // Add this line
+  });
+
+  close2.addEventListener("click", function () {
+    overlaymenu.classList.remove("open");
+    document.body.classList.remove("menu-open"); // Add this line
+  });
+
+  overlaymenu.addEventListener("click", function () {
+    overlaymenu.classList.remove("open");
+    document.body.classList.remove("menu-open"); // Add this line
+  });
+</script>
+
 
   </script>
   
