@@ -96,9 +96,6 @@ align-items: center;
 <script>
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
- 
-
   gsap.registerPlugin(ScrollTrigger);
 
   gsap.from(".red_section_p", {
@@ -111,7 +108,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
         start: "center center",
         end: "bottom",
         scrub: true,
-        markers: true,
     }
   });
 
