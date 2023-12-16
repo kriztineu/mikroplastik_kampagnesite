@@ -3,7 +3,7 @@
 
     <div class="infografik-fordeling">
         <img class="posen" src="/infografik_stoet/posen.png" alt="infografik-fordeling">
-        <img class="posenMobil" src="/infografik_stoet/posenMobil.png" alt="">
+        <!-- <img class="posenMobil" src="/infografik_stoet/posenMobil.png" alt=""> -->
         <div class="procenterne">
             <div class="Procent70">
                 <p class="pSecondary">Langt størstedelen af <span>din støtte går til hav- og miljøindsatser</span>, hvor vi arbejder for at mindske plastikforurening – både i Danmark og internationalt. Det gør vi blandt andet gennem <span>oplysning, vidensdeling, events, undervisning og foredrag</span>. Vi står også i spidsen for årlige oprydninger i naturen sammen med andre organisationer fra hele verden. </p>
@@ -21,15 +21,29 @@
 </section>
 
 <style>
+    .procenterne p {
+        font-size: 6px;
+        max-width: 25ch;
+    }
 
     .Procent70 {
-        display: none;
+        text-align: right;
+        position: absolute;
+        left: 4.5vw;
+        bottom: 46vw;
     }
+
     .Procent22 {
-        display: none;
+        position: absolute;
+        right: 3vw;
+        bottom: 24vw;
     }
+
     .Procent8 {
-        display: none;
+        text-align: right;
+        position: absolute;
+        left: 4.5vw;
+        bottom: 20vw;
     }
 
     .infografik-fordeling {
@@ -40,61 +54,47 @@
     }
 
     .posen {
-        display: none;
-        width: 80%
+        width: 100%
     }
 
-    .posenMobil {
-        display: block;
-    }
+    @media screen and (min-width: 800px) { 
 
-    img {
-        width: 80%;
+        .procenterne p {
+        font-size: initial;
+        max-width: 30ch;
     }
-
-    @media screen and (min-width: 800px) {
 
         span {
             color: var(--primary-red)
         }
-        .procenterne p {
-        max-width: 30ch;
-        font-weight: 400;
-        }
 
     .posen {
-        display: block;
-        width: 80%;
-        
+        width: 80%
     }
     .posenMobil {
         display: none;
     }
     .Procent70 {
-        display: block;
+
         text-align: right;
         position: absolute;
-        left: 7.3vw;
+        left: 9.3vw;
         bottom: 37vw;
     }
 
     .Procent22 {
-        display: block;
         position: absolute;
-        right: 6vw;
+        right: 8vw;
         bottom: 18.5vw;
-        
     }
 
     .Procent8 {
         display: block;
         text-align: right;
         position: absolute;
-        left: 7.3vw;
+        left: 9.3vw;
         bottom: 16.5vw;
-        
     }
-
     }
 
 </style>
@@ -181,8 +181,4 @@ scrollTrigger: {
     opacity:100,
         duration: 0.1,
         });
-
-
-
-
 </script>
