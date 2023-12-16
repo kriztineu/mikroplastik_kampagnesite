@@ -1,0 +1,55 @@
+---
+import StoetFormular from "../stoet/StoetFormular.astro";
+---
+<div class="modal" id="modal">
+    <div class="modal-inner">
+        <div class="stoetForm">
+            <StoetFormular />
+        </div>
+        <button class="close" id="closeModal">
+            <img src="/burgermenu-luk.svg" alt="Close">
+        </button>
+    </div>
+  </div>
+  
+  <style>
+
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: none;
+      z-index: 99999;
+    }
+
+    .modal-inner {
+        position: absolute;
+        display: flex;
+        align-items: right;
+        flex-direction: column;
+    }
+  
+    .modal.open {
+      display: flex;
+    }
+
+  </style>
+  
+  <script>
+    const closeBtn = document.getElementById("closeModal");
+    const modal = document.getElementById("modal");
+  
+    closeBtn.addEventListener("click", () => {
+      modal.classList.remove("open");
+      console.log("Modal closed");
+    });
+  
+    // Open the modal after 3 seconds
+    setTimeout(() => {
+      modal.classList.add("open");
+      console.log("Modal opened");
+    }, 3000);
+  </script>
+  

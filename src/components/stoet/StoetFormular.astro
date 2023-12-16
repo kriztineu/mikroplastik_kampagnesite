@@ -1,7 +1,8 @@
 ---
 import BTN1 from "../general/BTN1.astro";
+const { position } = Astro.props;
 ---
-<section class="formBox">
+<section class=`formBox ${position}`>
     <div class="stoetHeading">
         <h2>Støt os i kampen</h2>
         <p>Du kan støtte månedligt eller med engangbetaling. Alt støtte går til kampen for et plastikfrit samfund.</p>
@@ -63,9 +64,6 @@ label {
         padding-right: 2rem;
 }
 
-.formBox { 
-
-}
 @keyframes slideUp {
   0% {
     transform: translateY(0);
@@ -235,3 +233,12 @@ label {
     }
 
 </style>
+
+<script>
+    const formContainer = document.querySelector(".formBox")
+
+    formContainer.addEventListener("click", function () {
+    formContainer.classList.toggle("popup")
+  });
+
+</script>
