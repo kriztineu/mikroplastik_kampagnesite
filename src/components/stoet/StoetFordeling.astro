@@ -30,6 +30,24 @@
         width: 100%;
         display: none;
     }
+
+    .Procent70 {
+        display: none;
+    }
+    .Procent22 {
+        display: none;
+    }
+    .Procent8 {
+        display: none;
+    }
+
+    .infografik-fordeling {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
     /* .procenterne p {
         font-size: 10px;
         max-width: 25ch;
@@ -55,14 +73,9 @@
         bottom: 20vw;
     }
 
-    .infografik-fordeling {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-    }
 
-    /*  */ */
+
+    /*  */
 
     @media screen and (min-width: 800px) { 
 
@@ -75,27 +88,29 @@
             color: var(--primary-red)
         }
 
-    .posen {
-        width: 80%
-    }
-    .posenMobil {
-        display: none;
-    }
-    .Procent70 {
-
+        .posen {
+            width: 80%;
+            display: block;
+        }
+        .posenMobil {
+            display: none;
+        }
+        .Procent70 {
+        display: block;
         text-align: right;
         position: absolute;
         left: 9.3vw;
         bottom: 37vw;
     }
 
-    .Procent22 {
+        .Procent22 {
+        display: block;
         position: absolute;
         right: 8vw;
         bottom: 18.5vw;
     }
 
-    .Procent8 {
+        .Procent8 {
         display: block;
         text-align: right;
         position: absolute;
