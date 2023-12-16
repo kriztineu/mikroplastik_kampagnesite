@@ -1,21 +1,100 @@
 <section>
     <h1 class="h1Secondary h1Blaa">Vi bruger dit bidrag med omtanke</h1>
+
     <div class="infografik-fordeling">
-        <img src="/img/infografik-fordeling.png" alt="infografik-fordeling">
+        <img class="posen" src="/infografik_stoet/posen.png" alt="infografik-fordeling">
+        <img class="posenMobil" src="/infografik_stoet/posenMobil.png" alt="">
+        <div class="procenterne">
+            <div class="Procent70">
+                <p class="pSecondary">Langt størstedelen af <span>din støtte går til hav- og miljøindsatser</span>, hvor vi arbejder for at mindske plastikforurening – både i Danmark og internationalt. Det gør vi blandt andet gennem <span>oplysning, vidensdeling, events, undervisning og foredrag</span>. Vi står også i spidsen for årlige oprydninger i naturen sammen med andre organisationer fra hele verden. </p>
+            </div>
+            <div class="Procent22">
+                <p class="pSecondary">En del af din støtte bidrager til at lægge et <span>politisk pres</span> for forbedret miljølovgivning. Derudover støtter du <span>fundraising og indsamlinger</span> for Plastic Changer bevægelsens vækst.</p>
+            </div>
+            <div class="Procent8">
+                <p class="pSecondary">Og så går en lille del til <span>administration</span>, og til at give Plastic Change et sted at bo.</p>
+            </div>
+        </div>
+
     </div>
     
 </section>
 
 <style>
 
+    .Procent70 {
+        display: none;
+    }
+    .Procent22 {
+        display: none;
+    }
+    .Procent8 {
+        display: none;
+    }
+
     .infografik-fordeling {
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+    }
+
+    .posen {
+        display: none;
+        width: 80%
+    }
+
+    .posenMobil {
+        display: block;
     }
 
     img {
         width: 80%;
+    }
+
+    @media screen and (min-width: 800px) {
+
+        span {
+            color: var(--primary-red)
+        }
+        .procenterne p {
+        max-width: 30ch;
+        font-weight: 400;
+        }
+
+    .posen {
+        display: block;
+        width: 80%;
+        
+    }
+    .posenMobil {
+        display: none;
+    }
+    .Procent70 {
+        display: block;
+        text-align: right;
+        position: absolute;
+        left: 7.3vw;
+        bottom: 37vw;
+    }
+
+    .Procent22 {
+        display: block;
+        position: absolute;
+        right: 6vw;
+        bottom: 18.5vw;
+        
+    }
+
+    .Procent8 {
+        display: block;
+        text-align: right;
+        position: absolute;
+        left: 7.3vw;
+        bottom: 16.5vw;
+        
+    }
+
     }
 
 </style>
@@ -39,6 +118,69 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
         scrub: true,
     }
   });
+
+  gsap.from(".Procent70", {
+scrollTrigger: {
+        trigger: ".Procent70",
+        start: "start 80%",
+        end: "bottom top",
+        scrub: true,
+},
+    opacity:0,
+    
+        });
+            gsap.to(".Procent70", {
+scrollTrigger: {
+        trigger: ".Procent70",
+        start: "start top",
+        end: "start top",
+        scrub: true,
+},
+    opacity:100,
+        duration: 5,
+        });
+
+        gsap.from(".Procent22", {
+scrollTrigger: {
+        trigger: ".Procent22",
+        start: "start 80%",
+        end: "bottom top",
+        scrub: true,
+},
+    opacity:0,
+    
+        });
+            gsap.to(".Procent22", {
+scrollTrigger: {
+        trigger: ".Procent22",
+        start: "start top",
+        end: "start top",
+        scrub: true,
+},
+    opacity:100,
+        duration: 1,
+        });
+
+        gsap.from(".Procent8", {
+scrollTrigger: {
+        trigger: ".Procent22",
+        start: "start 80%",
+        end: "bottom top",
+        scrub: true,
+},
+    opacity:0,
+    
+        });
+            gsap.to(".Procent8", {
+scrollTrigger: {
+        trigger: ".Procent22",
+        start: "start top",
+        end: "start top",
+        scrub: true,
+},
+    opacity:100,
+        duration: 0.1,
+        });
 
 
 
