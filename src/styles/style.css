@@ -237,4 +237,8 @@ a:visited {
     width: 100%;
     object-fit: cover;
   }
+
+  .HeroImg h1 {
+    width: 10ch;
+  }
 }
