@@ -1,64 +1,66 @@
 ---
 import BTN1 from "../general/BTN1.astro";
 ---
-<section class="formBox">
-    <div class="stoetHeading">
-        <h2>Støt os i kampen</h2>
-        <p>Du kan støtte månedligt eller med engangbetaling. Alt støtte går til kampen for et plastikfrit samfund.</p>
-    </div>
-
-    <div class="antalGange">
-        <input type="radio" id="enGang" name="stoetType" class="stoetBTN1 tertiaryBTN stoetRadio" checked>
-        <label for="enGang" class="stoetBTN1 tertiaryBTN"></label>
-        <p>Én gang</p>
-    
-        <input type="radio" id="manedligt" name="stoetType" class="stoetBTN1 tertiaryBTN stoetRadio">
-        <label for="manedligt" class="stoetBTN1 tertiaryBTN"></label>
-        <p>Månedligt</p>
-    </div>
-    
-
-    <div class="stoetBeloeb">
-        <input type="radio" id="stoet50" name="stoetBeloeb" class="stoetBTN2 tertiaryBTN stoetRadio" checked>
-        <label for="stoet50" class="stoetBTN2 tertiaryBTN">50</label>
-    
-        <input type="radio" id="stoet100" name="stoetBeloeb" class="stoetBTN2 tertiaryBTN stoetRadio">
-        <label for="stoet100" class="stoetBTN2 tertiaryBTN">100</label>
-    
-        <input type="radio" id="stoet150" name="stoetBeloeb" class="stoetBTN2 tertiaryBTN stoetRadio">
-        <label for="stoet150" class="stoetBTN2 tertiaryBTN">150</label>
-    </div>
-    
-
-    <div class="stoetCTA">
-        <form class="andetBeloeb ">
-            <input type="text" id="Andet beløb" placeholder="Andet beløb ..."></label>
-        </form>
-        
-        <div class="stoetCTA2">
-            <BTN1 data="Støt nu"/>
-            <p>Og fortsæt til betaling</p>
+<section class="popUp">
+    <section class="formBox">
+        <div class="stoetHeading">
+            <h2>Støt os i kampen</h2>
+            <p>Du kan støtte månedligt eller med engangbetaling. Alt støtte går til kampen for et plastikfrit samfund.</p>
         </div>
 
-    </div>
-</section>
+        <div class="antalGange">
+            <input type="radio" id="enGang" name="stoetType" class="stoetBTN1 tertiaryBTN stoetRadio" checked>
+            <label for="enGang" class="stoetBTN1 tertiaryBTN"></label>
+            <p>Én gang</p>
+        
+            <input type="radio" id="manedligt" name="stoetType" class="stoetBTN1 tertiaryBTN stoetRadio">
+            <label for="manedligt" class="stoetBTN1 tertiaryBTN"></label>
+            <p>Månedligt</p>
+        </div>
+        
 
+        <div class="stoetBeloeb">
+            <input type="radio" id="stoet50" name="stoetBeloeb" class="stoetBTN2 tertiaryBTN stoetRadio" checked>
+            <label for="stoet50" class="stoetBTN2 tertiaryBTN">50</label>
+        
+            <input type="radio" id="stoet100" name="stoetBeloeb" class="stoetBTN2 tertiaryBTN stoetRadio">
+            <label for="stoet100" class="stoetBTN2 tertiaryBTN">100</label>
+        
+            <input type="radio" id="stoet150" name="stoetBeloeb" class="stoetBTN2 tertiaryBTN stoetRadio">
+            <label for="stoet150" class="stoetBTN2 tertiaryBTN">150</label>
+        </div>
+        
+
+        <div class="stoetCTA">
+            <form class="andetBeloeb ">
+                <input type="text" id="Andet beløb" placeholder="Andet beløb ..."></label>
+            </form>
+            
+            <div class="stoetCTA2">
+                <BTN1 data="Støt nu"/>
+                <p>Og fortsæt til betaling</p>
+            </div>
+
+        </div>
+    </section>
+</section>
 <style>
 
 label {
     font-family: Campton;
 }
 
+.popUp {
+
+    align-items: center;
+}
 .formBox {
         display: flex;
         flex-direction: column;
-        gap: 2.5rem;
-        padding: 1rem;
-        width: 328px;
-        height: 640px;
-        position: absolute;
-        margin: 2.5rem;
-        margin-top: 10rem;
+        gap: 3rem;
+        padding: 1.5rem;
+        width: 460px;
+        height: 670px;
 }
 @keyframes slideUp {
   0% {
@@ -88,6 +90,11 @@ label {
         margin-right: 2rem;
     }
 
+    .stoetHeading h2 {
+        font-size: 40px;
+        margin-top: 1rem;
+    }
+
     .antalGange {
         display: flex;
         align-items: center;
@@ -109,7 +116,7 @@ label {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        gap: 6rem;
+        gap: 5rem;
     }
 
     .stoetCTA2 {
@@ -128,8 +135,8 @@ label {
 
     .stoetBTN1 {
         border-radius: 50%;
-        height: 30px;
-        width: 30px;
+        height: 40px;
+        width: 40px;
         cursor: pointer;
         border: none;
         outline: none;
@@ -159,8 +166,8 @@ label {
 
     .stoetBTN2 {
         border-radius: 50%;
-        height: 60px;
-        width: 60px;
+        height: 70px;
+        width: 70px;
         cursor: pointer;
         border: none;
         outline: none;
@@ -170,7 +177,7 @@ label {
         background-color: transparent;
         color: var(--light-grey);
         border-style: solid;
-        line-height: 55px;
+        line-height: 65px;
 }
 
     .andetBeloeb input {
@@ -178,9 +185,9 @@ label {
         border-style: solid;
         background-color: transparent;
         color: var(--light-grey);
-        width: 260px; 
+        width: 340px; 
         height: 52px; 
-        padding: 10px; 
+        padding: 15px;
         border-radius: 8px;
     }
 
@@ -195,44 +202,46 @@ label {
 
     @media screen and (min-width: 800px) {
         .formBox {
-            width: 606px;
-            height: 967px;
-            gap: 5rem;
-            margin: 6rem;
-            margin-top: 15rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 2rem;
+        width: 555px;
+        height: 750px;
         }
 
         .stoetBTN1 {
-            height: 48px;
-            width: 48px;
+            height: 38px;
+            width: 38px;
         }
         .stoetBTN2 {
-            height: 90px;
-            width: 90px;
-            font-size: 30px;
-            line-height: 85px;
+            height: 80px;
+            width: 80px;
+            font-size: 25px;
+            line-height: 80px;
+        }
+
+        .antalGange {
+        gap: 2rem;
+        }
+
+        .stoetBeloeb {
+        gap: 3rem;
         }
 
         .andetBeloeb input {
-            width: 488px;
-            height: 79px;
+            width: 420px;
+            height: 40px;
             padding: 30px;
             font-size: larger;
         }
 
-            .stoetCTA2 p {
-            font-size: 15px;
-            font-style: italic;
-            font-weight: 400;
-            padding-top: 0.5rem;
-        }
-
-        .stoetBeloeb {
+        .stoetCTA {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
             gap: 4rem;
-        }
-
-        .antalGange {
-        gap: 1.5rem;    
         }
     }
 

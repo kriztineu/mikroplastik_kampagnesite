@@ -1,6 +1,7 @@
 <article>
 <section>
 <h2 class="h1Secondary">Så småt, er et stort problem</h2>
+<img class="infografikMobil" src="/infografik_landing/microplastik_infografik.png" alt="Infografik mobil">
 <div class="infoRoot">
     <img src="/infografik_landing/gren2.svg" alt="img" class="infographicLine">
 </div>
@@ -73,6 +74,17 @@
 
 <style>
 
+  .infografikMobil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .iconSection {
+    display: none;
+  }
+
 .linkText {
     text-align: center;
 }
@@ -94,6 +106,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
 }
 
 .infographicicon {
@@ -146,12 +159,23 @@ a:hover {
 
 @media screen and (min-width: 800px) { 
 
+  .iconSection {
+    display: block;
+  }
+
+  .infografikMobil {
+    display: none;
+  }
+
     .infographicLine {
     height: 170rem;
     width: auto;
 
 }
 
+    .infoRoot img {
+      display: block;
+    }
 .infoRoot {
     display: flex;
     align-items: center;
@@ -174,6 +198,7 @@ a:hover {
 .iconSection {
     position: absolute;
     top: 257%;
+    margin-left: 3rem;
 }
 
 .oneInfo {
@@ -181,7 +206,7 @@ a:hover {
     flex-direction: column;
     padding-left: 7rem;
     padding-right: 7rem;
-    gap: 3rem;
+    gap: 4rem;
 }
 
 h2 {
@@ -210,6 +235,11 @@ a {
 
 a:hover {
    color: var(--primary-red);
+}
+
+.header1, .p1 {
+  margin-left: 1.7rem;
+  padding-right: 1rem;
 }
 
 }

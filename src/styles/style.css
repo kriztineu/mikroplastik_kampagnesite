@@ -13,6 +13,27 @@
   --light-grey: #d9d9d9;
 }
 
+@font-face {
+  font-family: "CamptonBold";
+  src: url("/fontCampton/CamptonBold.otf") format("opentype"); /* Adjust the path accordingly */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CamptonSemiBold";
+  src: url("/fontCampton/CamptonSemiBold.otf") format("opentype"); /* Adjust the path accordingly */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CamptonBook";
+  src: url("/fontCampton/CamptonBook.otf") format("opentype"); /* Adjust the path accordingly */
+  font-weight: normal;
+  font-style: normal;
+}
+
 ::selection {
   background-color: var(--light-grey); /* Ændr farven efter behov */
   color: var(--primary-red); /* Ændr tekstfarven efter behov */
@@ -46,7 +67,7 @@
 h1,
 h2,
 h3 {
-  font-family: Campton;
+  font-family: CamptonBold;
 }
 
 p,
