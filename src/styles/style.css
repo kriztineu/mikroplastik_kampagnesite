@@ -196,4 +196,13 @@ a:visited {
 .HeroImg {
   height: 100vh;
   width: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 800px) {
+  .HeroImg {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+  }
 }
