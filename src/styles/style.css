@@ -25,6 +25,7 @@
   src: url("/fontCampton/CamptonSemiBold.otf") format("opentype"); /* Adjust the path accordingly */
   font-weight: normal;
   font-style: normal;
+  src: local("Pacifico Regular"), local("Pacifico-Regular"), url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format("woff2");
   font-display: swap;
 }
 
@@ -33,6 +34,7 @@
   src: url("/fontCampton/CamptonBook.otf") format("opentype"); /* Adjust the path accordingly */
   font-weight: normal;
   font-style: normal;
+  src: local("Pacifico Regular"), local("Pacifico-Regular"), url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format("woff2");
   font-display: swap;
 }
 
