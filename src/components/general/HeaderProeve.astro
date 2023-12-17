@@ -218,7 +218,7 @@ import SoMe from "./SoMe.astro";
 
 </style>
 
-<!-- <script>
+<script>
   const overlaymenu = document.querySelector(".overlaymenu-container");
   const burgermenu = document.querySelector(".burger-menu");
   const close = document.querySelector(".burger-menu2");
@@ -248,43 +248,4 @@ import SoMe from "./SoMe.astro";
     overlaymenu.classList.remove("open");
     document.body.classList.remove("menu-open"); // Add this line
   });
-</script> -->
-
-<script>
-
-const overlaymenu = document.querySelector(".overlaymenu-container");
-  const burgermenu = document.querySelector(".burger-menu");
-  const close = document.querySelector(".burger-menu2");
-  const close2 = document.querySelector("section");
-
-  const some = document.querySelector(".SoMe")
-
-  // Change the event listeners to use passive option where applicable
-burgermenu.addEventListener("click", function () {
-  overlaymenu.classList.add("open");
-  document.body.classList.add("menu-open");
-  some.classList.toggle("blue");
-});
-
-close.addEventListener("click", function () {
-  overlaymenu.classList.remove("open");
-  document.body.classList.remove("menu-open");
-  some.classList.toggle("blue");
-});
-
-close2.addEventListener("click", function () {
-  overlaymenu.classList.remove("open");
-  document.body.classList.remove("menu-open");
-});
-
-overlaymenu.addEventListener("click", function () {
-  overlaymenu.classList.remove("open");
-  document.body.classList.remove("menu-open");
-});
-
-// Add passive: true to the wheel event listener
-document.addEventListener("wheel", function () {
-  // Your wheel event handler logic here
-}, { passive: true });
-
 </script>
