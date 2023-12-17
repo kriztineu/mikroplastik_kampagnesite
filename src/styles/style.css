@@ -190,3 +190,10 @@ a:visited {
 .hashtagBannerText {
   color: var(--white);
 }
+
+/* HERO IMG */
+
+.HeroImg {
+  height: 100vh;
+  width: 100%;
+}
