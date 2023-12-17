@@ -1,27 +1,104 @@
 <section>
-    <div>
-        <h1>Mission Mikroplastik</h1>
-        <p>Vi arbejder målrettet på at skubbe den politiske dagsorden
-            i retning mod et samfund, hvor vi i langt højere grad vasker
-            vores ting op og bruger dem igen og igen. Hvor vi generelt 
-            bruger mindre plastik, end vi gør vi i dag, og hvor det er langt
-            lettere som forbruger at undgå mikroplastik og skadelig kemi
-            i hverdagen.</p>
-    </div>
+<div class="primaryBoxSection">
+    <p class="big-p-text-desktop red_section_p ">
+        Vi arbejder målrettet på at skubbe den politiske dagsorden
+i retning mod et samfund, hvor vi i langt højere grad vasker
+vores ting op og bruger dem igen og igen. Hvor vi generelt 
+bruger mindre plastik, end vi gør vi i dag, og hvor det er langt
+lettere som forbruger at undgå mikroplastik og skadelig kemi
+i hverdagen.
+    </p>
+</div>
 </section>
-
-<style>
-    section {
-        background-color: var(--dark-blue);
-    }
     
-    h1{
-        padding-top: 2rem;
-        padding-left: 2rem;
-    }
+<style>
 
-    p {
-        padding-left: 2rem;
-        padding-top: 2rem;
-    }
+.section_one {
+  position: relative;
+  overflow: hidden; 
+  margin-bottom: -4px;
+}
+
+.section_one img {
+width: 200%;
+height: 200%;
+object-fit: cover; 
+}
+
+.text-container {
+position: absolute;
+top: 65%;
+padding-left: 2rem;
+}
+
+.heading_p {
+padding-bottom: 1rem;
+}
+
+.red_section_p {
+margin: 2rem;
+hyphens: auto;
+}
+
+.primaryBoxSection {
+background-color: var(--primary-red);
+height: 12rem;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+@media screen and (min-width: 800px) {
+
+.section_one img {
+  width: 100%;
+  height: 44rem;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  display: block;
+}
+
+.red_section_p {
+width: 50ch;
+}
+
+.primaryBoxSection {
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: var(--primary-red);
+height: 25rem;
+}
+
+.text-container {
+position: absolute;
+top: 65%;
+}
+
+.heading {
+padding-top: 1rem;
+}
+
+}
 </style>
+
+
+<script>
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".red_section_p", {
+  yPercent: 50,
+  duration: 4,
+  opacity: 0,
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: ".primaryBoxSection",
+    start: "center center",
+    end: "bottom",
+    scrub: true,
+}
+});
+
+</script>
