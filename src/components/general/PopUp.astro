@@ -39,9 +39,9 @@ import StoetFormPopUp from "./StoetFormPopUp.astro";
     }
 
     .close {
-    display: flex;
-    justify-content: right;
-    text-align: right;
+      position: fixed;
+    top: 3%;
+    right: 2%;
     z-index: 2000;
     width: 40px;
     height: 40px;
@@ -51,22 +51,37 @@ import StoetFormPopUp from "./StoetFormPopUp.astro";
     border: none;
     outline: none;
     }
+    body.modal-open::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #01142a81; /* Set the desired background color with transparency */
+    z-index: 9998; /* Make sure it's above other elements */
+  }
+
+  body.modal-open {
+    overflow: hidden; /* Optional: Prevent scrolling when the modal is open */
+  }
 
     @media screen and (min-width: 800px) {
       .close {
+        display: absolute;
         margin-bottom: -5rem;
         margin-left: 30rem;
       }
 
       .modal {
       position: fixed;
-      top: 10%;
+      top: 0;
       }
     }
 
   </style>
   
-  <script>
+  <!-- <script>
     const closeBtn = document.getElementById("closeModal");
     const modal = document.getElementById("modal");
   
@@ -79,6 +94,24 @@ import StoetFormPopUp from "./StoetFormPopUp.astro";
     setTimeout(() => {
       modal.classList.add("open");
       console.log("Modal opened");
-    }, 2500);
-  </script>
+    }, 2000);
+  </script> -->
   
+  <script>
+  const closeBtn = document.getElementById("closeModal");
+  const modal = document.getElementById("modal");
+  const body = document.body;
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("open");
+    body.classList.remove("modal-open"); // Remove the class from body
+    console.log("Modal closed");
+  });
+
+  // Open the modal after 3 seconds
+  setTimeout(() => {
+    modal.classList.add("open");
+    body.classList.add("modal-open"); // Add the class to body
+    console.log("Modal opened");
+  }, 2000);
+</script>
