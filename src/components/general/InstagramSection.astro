@@ -243,14 +243,14 @@
         autoSlide();
     }
 
-    carousel.addEventListener("mousedown", dragStart);
-    carousel.addEventListener("touchstart", dragStart);
+    carousel.addEventListener("mousedown", dragStart, {passive: true});
+    carousel.addEventListener("touchstart", dragStart, {passive: true});
 
-    carousel.addEventListener("mousemove", dragging);
-    carousel.addEventListener("touchmove", dragging);
+    carousel.addEventListener("mousemove", dragging, {passive: true});
+    carousel.addEventListener("touchmove", dragging, {passive: true});
 
-    carousel.addEventListener("mouseup", dragStop);
-    carousel.addEventListener("mouseleave", dragStop);
-    carousel.addEventListener("touchend", dragStop);
+    carousel.addEventListener("mouseup", dragStop, {passive: true});
+    carousel.addEventListener("mouseleave", dragStop, {passive: true});
+    carousel.addEventListener("touchend", dragStop), {passive: true};
 
 </script>

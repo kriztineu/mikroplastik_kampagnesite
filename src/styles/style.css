@@ -25,6 +25,7 @@
   src: url("/fontCampton/CamptonSemiBold.otf") format("opentype"); /* Adjust the path accordingly */
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -32,6 +33,7 @@
   src: url("/fontCampton/CamptonBook.otf") format("opentype"); /* Adjust the path accordingly */
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 ::selection {
