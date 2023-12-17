@@ -29,31 +29,29 @@
         <div class="centered-container">
             <div class="vandflaske_section">
               <div class="oneInfo vandflaske">
-                <img src="/infografik_mission/vandflaske.svg" alt="img" class="infographicicon icon4" style="width: 10%; height: auto;">
+                <img src="/infografik_mission/vandflaske.svg" alt="img" class="infographicicon icon4" style="width: 10%; height: auto;"> 
             <div>
             </div>
-                <p>1 liter købevand indeholder i 
-                    gennemsnit</p>
-                    <h1>325</h1>
+                    <h1 class="h1_number">325</h1>
                     <p>Mikropartikler 
-                        af plastik</p>
-                <p>Antallet af plastikpartikler varierer, men i nogle produkter
+                        af plastik i 1 liter købevand</p>
+                <p class="p_section">Antallet af plastikpartikler varierer, men i nogle produkter
                     finder man helt op til 1000 partikler per liter. Ligesom der er 
                     fundet mikroplastik i fisk, hvilket er grund til bekymring pga. 
                     kemikalier, der kan migrere ind i fiskekødet, som vi spiser.</p>
 
-                <p>Når man bruger plastikprodukter, frigives mikroplastik ud 
+                <p class="p_section">Når man bruger plastikprodukter, frigives mikroplastik ud 
                     i vores miljø. Plastikprodukter afgiver mikroplastik, når de slides.</p>
 
-                <p>Eksempelvis slides der mikroplastik fra bildæk (der er lavet af 
+                <p class="p_section">Eksempelvis slides der mikroplastik fra bildæk (der er lavet af 
                     syntetisk gummi), når man kører og bremser, fra syntetiske
                     tekstiler, når de vaskes, og fra maling, når det slides af</p>
 
-                <p>Derudover
+                <p class="p_section">Derudover
                     indeholder visse kosmetik- og plejeprodukter tilsat mikroplastik, 
                     som ender i vores miljø via spildevandet, når de vaskes af huden.</p>
 
-                <h2>Slid og spild i forbruget</h2>
+                <h2 class="h2_second">Slid og spild i forbruget</h2>
                 <h3>De følgende industrier anses som de største syndere på
                     verdensplan (målt i vægt):</h3>
             </div>
@@ -101,13 +99,39 @@
 
     <style>
 
-.centered-section {
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    text-align: center;
-    height: 100vh;
+.h1_number {
+    margin-top: 2rem;
 }
+
+.daek {
+    padding-top: 7rem;
+}
+
+.vandflaske {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.p_section {
+    margin: 2rem;
+    text-align: left;
+}
+
+.centered-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+}
+
+.vandflaske_section {
+  text-align: center;
+}
+
+.oneInfo.vandflaske {
+  display: inline-block;
+}
+
 
 span{
     text-decoration: underline;
@@ -119,15 +143,11 @@ span{
     }
 
     article {
-        height: 100rem;
+        height: 175rem;
     }
 
     h3, h2 {
     text-align: center;
-    }
-
-    h3 {
-        padding-bottom: 6rem;
     }
 
     h2 {
@@ -156,7 +176,8 @@ span{
         grid-template-columns: 1fr 1fr;
         gap:2rem;
         grid-column: 30rem;
-    
+        margin-left: 5rem;
+       margin-top: 5rem;
     }
     
     .iconSection {
@@ -197,6 +218,8 @@ span{
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
         grid-column: 30rem;
+        margin-left: 10rem;
+        margin-top: 8rem;
     
     }
     
@@ -214,13 +237,17 @@ span{
     }
     
     article {
-        height: 320rem;
+        height: 290rem;
     
     }
     .linkText {
         margin-top: 7rem;
         text-align: center;
         font-size: 1.5rem;
+    }
+
+    h3 {
+        padding-bottom: 3rem;
     }
     
     }
@@ -371,7 +398,5 @@ span{
       }
     });
 
-
- 
     
     </script>
