@@ -2,27 +2,33 @@
 import BTN1 from "../general/BTN1.astro";
 ---
 <article class="imgSection">
-    <section>
-        <img src="/img/landing_eco.webp" class="imgBanner" alt="Photo of plastic cups found on the beach"/>
-    </section>
-</article>
-<article class="stoetBox secondaryBoxSection">
-    <section class="stoetBoxElements">
-    <h2 class="boxText">
-        Støt vores kamp mod mikroplastik med en donation.
-    </h2>
-    <div class="boxButton"><BTN1 data="Giv et bidrag"/></div>
-    </section>
+        <section>
+            <img class="kop" src="/img/landing_eco.webp" class="imgBanner" alt="Photo of plastic cups found on the beach"/>
+        </section>
+    </article>
+    <article class="stoetBox secondaryBoxSection">
+        <section class="stoetBoxElements">
+        <h2 class="boxText">
+            Støt vores kamp mod mikroplastik med en donation.
+        </h2>
+        <div class="boxButton"><BTN1 data="Giv et bidrag"/></div>
+        </section>
 </article>
 
 <style>
+
+    .kop {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
 
 .stoetBox {
     margin:1rem;
     width: 18.75rem;
     height: 16.563rem;
     position: relative;
-    top: -8rem;
+    top: -10rem;
 }
 
 .stoetBoxElements {
@@ -46,7 +52,7 @@ import BTN1 from "../general/BTN1.astro";
 }
 
 .imgSection {
-    margin:0;
+    margin-bottom: 0;
 }
 
 .imgBanner {
