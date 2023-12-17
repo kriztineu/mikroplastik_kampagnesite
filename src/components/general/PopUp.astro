@@ -1,39 +1,64 @@
 ---
-import StoetFormular from "../stoet/StoetFormular.astro";
+import StoetFormPopUp from "./StoetFormPopUp.astro";
 ---
 <div class="modal" id="modal">
     <div class="modal-inner">
+      <button class="close" id="closeModal">
+        <img src="/burgermenu-luk.svg" alt="Close">
+    </button>
         <div class="stoetForm">
-            <StoetFormular />
+          <StoetFormPopUp/>
         </div>
-        <button class="close" id="closeModal">
-            <img src="/burgermenu-luk.svg" alt="Close">
-        </button>
     </div>
-  </div>
+</div>
   
   <style>
 
     .modal {
       position: fixed;
       top: 0;
-      left: 0;
+      left: left;
       right: 0;
       bottom: 0;
       display: none;
       z-index: 99999;
     }
-
+    
     .modal-inner {
-        position: absolute;
-        display: flex;
-        align-items: right;
-        flex-direction: column;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
+    .stoetForm {
+    }
+
   
     .modal.open {
       display: flex;
     }
+
+    .close {
+    display: flex;
+    justify-content: right;
+    text-align: right;
+    z-index: 2000;
+    width: 40px;
+    margin-bottom: -3rem;
+    margin-left: 24.5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    }
+
+    @media screen and (min-width: 800px) {
+      .close {
+        margin-bottom: -3rem;
+        margin-left: 32rem;
+      }
+
+    }
+  
 
   </style>
   
@@ -50,6 +75,6 @@ import StoetFormular from "../stoet/StoetFormular.astro";
     setTimeout(() => {
       modal.classList.add("open");
       console.log("Modal opened");
-    }, 3000);
+    }, 2500);
   </script>
   
