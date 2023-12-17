@@ -1,0 +1,139 @@
+
+<article class="faqSection">
+    <h2>Så hvad kan du selv gøre?</h2>
+    
+    <section class="infoSection">
+    <div class="infoBox">
+        <img src="" class="faqIcon"  width="auto"
+        height="50px" alt="Brev ikon"/>
+        <p class="pSecondary">Kontakt os</p>
+    </div>
+    <div class="infoBox">
+        <img src="" class="faqIcon" width="auto"
+        height="85px" alt="Fradragsregler"/>
+        <p class="pSecondary">Fradragsregler for SKAT</p>
+    </div>
+    <div class="infoBox">
+        <img src="" class="faqIcon" width="auto"
+        height="60px" alt="Bidrag ikon"/>
+        <p class="pSecondary">Hvad bruger vi dit bidrag til</p>
+    </div>
+    <div class="infoBox">
+        <img src="" class="faqIcon" width="auto"
+        height="55px" alt="Contact us icon"/>
+        <p class="pSecondary">Støt månedligt</p>
+    </div>
+    <div class="infoBox">
+        <img src="" class="faqIcon" width="auto"
+        height="85px" alt="Contact us icon"/>
+        <p class="pSecondary">Indsamlingsaktiviteter</p>
+    </div>
+    <div class="infoBox">
+        <img src="" class="faqIcon" width="auto"
+        height="60px" alt="Contact us icon"/>
+        <p class="faqText pSecondary">Udmeldelse</p>
+    </div>
+    </section>
+    </article>
+    
+    <style>
+        
+        article {
+        background-color: var(--dark-blue);
+        }
+
+        .faqSection {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2rem;
+            margin:0;
+        }
+    
+        .infoSection {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    
+        .infoBox {
+            display: flex;
+            flex-direction: column;
+            gap:1rem;
+            align-items: center;
+            padding-bottom: 2rem;
+            padding-top: 1rem;
+        }
+        
+        .faqIcon {
+            transition: transform 0.5s ease;
+        }
+    
+        .faqIcon:hover {
+            transform: scale(1.10);
+        }
+    
+        h2 {
+            padding-bottom: 3rem;
+            padding-top: 3rem;
+
+        }
+
+        p {
+            color: var(--white);
+        }
+    
+        .faqText {
+            max-width 10px: 
+        }
+        
+        @media screen and (min-width: 800px) {
+    
+            .faqSection {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin:0;
+        }
+    
+            .infoSection {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4rem;
+        }
+    
+        .faqIcon {
+          height: 120px;
+        }
+    
+        .infoBox {
+            display: flex;
+            flex-direction: column;
+            gap:1rem;
+            align-items: center;
+        }
+        }
+    
+    </style>
+    
+    <script>
+        import { gsap } from "gsap";
+        import { ScrollTrigger } from "gsap/ScrollTrigger";
+    
+      gsap.registerPlugin(ScrollTrigger);
+    
+      gsap.from(".h2Secondary", {
+          yPercent: 50,
+          duration: 4,
+          opacity: 0,
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: ".faqSection",
+            start: "start 90%",
+            end: "center 60%",
+            scrub: true,
+        }
+      });
+    
+      </script>
+      
