@@ -1,10 +1,10 @@
 ---
 import BTNmikro from "./BTNmikro.astro";
 import BTNheart from "./BTNheart.astro";
-import SoMe from "./SoMe.astro";
 ---
 
 <header>
+  <div id="navbar">
     <div class="menu-container">
         <div class="main-menu">
             <div class="logo-container">
@@ -36,12 +36,10 @@ import SoMe from "./SoMe.astro";
                     <li><a href="/rejsen.html">Mission Mikroplastik</a></li>
                     <hr>
               </div>
-              <!-- <div class="SoMe" style="background-color: var(--dark-blue);">
-                <SoMe bg="blue"/>
-              </div> -->
           </ul>
           </div>
     </div>
+  </div>
 
 </header>
 
@@ -250,3 +248,22 @@ import SoMe from "./SoMe.astro";
     document.body.classList.remove("menu-open"); // Add this line
   });
 </script>
+
+<script>
+  window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+} 
+<script/>
