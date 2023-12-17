@@ -1,11 +1,11 @@
 <article class="secondaryBoxSection">
     <section>
     <h2>Mikroplastisk i mad-og drikkevarer</h2>
-    <h3>Mikroplast er bl.a. fundet i:</h3>
+    <h3 class="h3_section">Mikroplast er bl.a. fundet i:</h3>
      
         <div class="infoIconSection">
         <div class="oneInfo fisk">  
-               <p>Fisk</p>
+               <p class="p_section1">Fisk</p> 
             <img src="/infografik_mission/fisk.svg" alt="img" class="infographicicon icon1"style="width: 60%; height: auto;">
             </div>
         </div>
@@ -13,14 +13,14 @@
         <div class="infoIconSection">
             <div></div>
             <div class="oneInfo oel">
-                <p>Øl</p>
+                <p class="p_section2">Øl</p>
             <img src="/infografik_mission/oel.svg" alt="img" class="infographicicon icon2" style="width: 20%; height: auto;"> 
             </div>
         </div>
     
         <div class="infoIconSection">
             <div class="oneInfo vin">
-                <p>Vin</p>
+                <p class="p_section3">Vin</p>
                 <img src="/infografik_mission/vin.svg" alt="img" class="infographicicon icon3" style="width: 20%; height: auto;">
             </div>
         </div>
@@ -32,22 +32,24 @@
                 <img src="/infografik_mission/vandflaske.svg" alt="img" class="infographicicon icon4" style="width: 10%; height: auto;"> 
             <div>
             </div>
-                    <h1 class="h1_number">325</h1>
-                    <p>Mikropartikler 
-                        af plastik i 1 liter købevand</p>
-                <p class="p_section">Antallet af plastikpartikler varierer, men i nogle produkter
+                    <h1 class="h1_number"><span>325</span></h1>
+                    <div class="centered-p">
+                    <p class="p_micro">Mikropartikler 
+                        af plastik i 1 liter købevand</p></div>
+
+                <p class="p_section_">Antallet af plastikpartikler varierer, men i nogle produkter
                     finder man helt op til 1000 partikler per liter. Ligesom der er 
                     fundet mikroplastik i fisk, hvilket er grund til bekymring pga. 
                     kemikalier, der kan migrere ind i fiskekødet, som vi spiser.</p>
 
-                <p class="p_section">Når man bruger plastikprodukter, frigives mikroplastik ud 
+                <p class="p_section_">Når man bruger plastikprodukter, frigives mikroplastik ud 
                     i vores miljø. Plastikprodukter afgiver mikroplastik, når de slides.</p>
 
-                <p class="p_section">Eksempelvis slides der mikroplastik fra bildæk (der er lavet af 
+                <p class="p_section_">Eksempelvis slides der mikroplastik fra bildæk (der er lavet af 
                     syntetisk gummi), når man kører og bremser, fra syntetiske
                     tekstiler, når de vaskes, og fra maling, når det slides af</p>
 
-                <p class="p_section">Derudover
+                <p class="p_section_">Derudover
                     indeholder visse kosmetik- og plejeprodukter tilsat mikroplastik, 
                     som ender i vores miljø via spildevandet, når de vaskes af huden.</p>
 
@@ -98,6 +100,7 @@
 
     <style>
 
+
 .h1_number {
     margin-top: 2rem;
 }
@@ -115,6 +118,8 @@
     margin: 2rem;
     text-align: left;
 }
+
+
 
 .centered-container {
   display: flex;
@@ -176,7 +181,6 @@ span{
         gap:2rem;
         grid-column: 30rem;
         margin-left: 5rem;
-       margin-top: 5rem;
     }
     
     .iconSection {
@@ -210,7 +214,17 @@ span{
     
     @media screen and (min-width: 800px) { 
     
+ .p_micro {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+  }
 
+  .centered-p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
     
     .infoIconSection {
         display: grid;
@@ -244,10 +258,25 @@ span{
         text-align: center;
         font-size: 1.5rem;
     }
+.p_section1 {
+    padding-left: 3rem;
+    font-size: 1.5rem;
+}
+.p_section2, .p_section3 {
+    padding-left: 1.5rem;
+    font-size: 1.5rem;
+}
+.p_section_ {
+   margin: 4rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    font-size: 1.5rem;
+}
+.h3_section {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+}
 
-    h3 {
-        padding-bottom: 3rem;
-    }
     
     }
     </style>
@@ -348,7 +377,7 @@ span{
         opacity: 0,
         stagger: 0.2,
         scrollTrigger: {
-          trigger: ".daek",
+          trigger: ".toej",
           start: "start 80%",
           end: "bottom bottom",
           scrub: true,
