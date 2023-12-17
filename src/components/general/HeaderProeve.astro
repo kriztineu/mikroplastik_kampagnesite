@@ -6,7 +6,7 @@ import SoMe from "./SoMe.astro";
 
 <header>
     <div class="menu-container">
-        <div class="main-menu">
+        <div class="main-menu" id="myHeader">
             <div class="logo-container">
                 <li><a href="/index.html"><img src="/logo.webp" class="logo" alt="Plastic Change Logo"/></a></li>
             </div>
@@ -47,6 +47,17 @@ import SoMe from "./SoMe.astro";
 
 
 <style>
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 92px;
+  background-color: #01142a81;
+}
+.sticky + .content {
+  padding-top: 102px;
+}
 
   .SoMe {
     background-color: var(--dark-blue);
@@ -218,6 +229,26 @@ import SoMe from "./SoMe.astro";
   }
 
 </style>
+
+<script>
+  // When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("myHeader");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+} 
+</script>
 
 <script>
   const overlaymenu = document.querySelector(".overlaymenu-container");
