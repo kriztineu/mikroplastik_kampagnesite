@@ -3,7 +3,7 @@ import BTN1 from "./BTN1.astro";
 import BTN2 from "./BTN2.astro";
 ---
 <header>
-  <section id="navbar">
+  <section id="navbar" class="header">
     <div class="menu-container">
       <div class="logo-container">
         <button class="btn"><a href="/index.html"></a><img src="public/logo.png" class="logo" alt="Plastic Change Logo"/></a></button>
@@ -50,9 +50,9 @@ import BTN2 from "./BTN2.astro";
         overflow: hidden;
     }
 
-    /* #navbar {
+    #navbar {
       overflow: hidden;
-    } */
+    } 
 
     .sticky {
       position: fixed;
@@ -60,6 +60,10 @@ import BTN2 from "./BTN2.astro";
       width: 100%;
       background-color: #01142a81;
     }
+
+    .content {
+  padding: 16px;
+}
 
     .sticky + .content {
   padding-top: 60px;
