@@ -6,7 +6,7 @@
         <div class="infoIconSection">
         <div class="oneInfo fisk">  
                <p>Fisk</p>
-            <img src="/infografik_mission/fisk.svg" alt="img" class="infographicicon icon1">
+            <img src="/infografik_mission/fisk.svg" alt="img" class="infographicicon icon1"style="width: 60%; height: auto;">
             </div>
         </div>
     
@@ -30,6 +30,8 @@
             <div class="oneInfo vandflaske">
                 <img src="/infografik_mission/vandflaske.svg" alt="img" class="infographicicon icon4" style="width: 30%; height: auto;">
             <div>
+            </div>
+
                 <p>1 liter købevand indeholder i 
                     gennemsnit</p>
                     <h1>325</h1>
@@ -54,16 +56,46 @@
                 <h2>Slid og spild i forbruget</h2>
                 <h3>De følgende industrier anses som de største syndere på
                     verdensplan (målt i vægt):</h3>
-
-
             </div>
         </div>
+
+        <div class="infoIconSection">
+            <div class="oneInfo daek">  
+                   <p>Dæk på biler, cykler og andre køretøjer</p>
+                <img src="/infografik_mission/bildaek.svg" alt="img" class="infographicicon icon1"style="width: 40%;">
+                </div>
+            </div>
+        
+            <div class="infoIconSection">
+                <div></div>
+                <div class="oneInfo toej">
+                    <p>Tøj, der er lavet af syntetiske plastikfibre (f.eks. polyester, nylon, akryl)</p>
+                <img src="/infografik_mission/bluse.svg" alt="img" class="infographicicon icon2" style="width: 40%;"> 
+                <img src="/infografik_mission/bukser.svg" alt="img" class="infographicicon icon2" style="width: 40%;"> 
+                </div>
+            </div>
+        
+            <div class="infoIconSection">
+                <div class="oneInfo maling">
+                    <p>Maling. sol, vind og vejr vil med
+                        tiden slide mikroplastik af malingen.</p>
+                    <img src="/infografik_mission/maling.svg" alt="img" class="infographicicon icon3" style="width: 40%;">
+                </div>
+            </div>
+        
+            <div class="infoIconSection">
+                <div></div>
+                <div class="oneInfo creme">
+                    <p>Kosmetik og-plejeprodukter der er
+                        tilsat mikroplastik.</p>
+                    <img src="/infografik_mission/creme.svg" alt="img" class="infographicicon icon4" style="width: 30%; ">
+                <div>
+                </div>
     <style>
 
 
-
     article {
-        height: 40rem;
+        height: 100rem;
     }
 
     h3, h2 {
@@ -126,11 +158,7 @@
     
     @media screen and (min-width: 800px) { 
     
-    
-    .infographicicon {
-        height: auto;
-        width: 300px;
-    }
+
     
     .infoIconSection {
         display: grid;
@@ -153,12 +181,10 @@
         gap: 3rem;
     }
     
-    
     article {
-        height: 150rem;
+        height: 500rem;
     
     }
-    
     .linkText {
         margin-top: 7rem;
         text-align: center;
@@ -166,7 +192,6 @@
     }
     
     }
-    
     </style>
     
     <script>
@@ -252,6 +277,62 @@
         stagger: 0.2,
         scrollTrigger: {
           trigger: ".vandflaske",
+          start: "start 80%",
+          end: "bottom bottom",
+          scrub: true,
+      }
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".daek", {
+        yPercent: 50,
+        duration: 4,
+        opacity: 0,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: ".daek",
+          start: "start 80%",
+          end: "bottom bottom",
+          scrub: true,
+      }
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".toej", {
+        yPercent: 50,
+        duration: 4,
+        opacity: 0,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: ".toej",
+          start: "start 80%",
+          end: "bottom bottom",
+          scrub: true,
+      }
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".maling", {
+        yPercent: 50,
+        duration: 4,
+        opacity: 0,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: ".maling",
+          start: "start 80%",
+          end: "bottom bottom",
+          scrub: true,
+      }
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".creme", {
+        yPercent: 50,
+        duration: 4,
+        opacity: 0,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: ".creme",
           start: "start 80%",
           end: "bottom bottom",
           scrub: true,
